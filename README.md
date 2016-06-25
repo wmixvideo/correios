@@ -1,6 +1,9 @@
 # Correios
 
+Biblioteca para rastreamento de objetos no webservice dos Correios.
+
 ##Forma de uso
+
 ```java
 final WSCorreios ws = new WSCorreios("USUARIO", "SENHA");
 final Sroxml sro = ws.consultaObjeto("PJ907948743BR");
