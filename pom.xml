@@ -27,13 +27,13 @@
     </scm>
 
     <properties>
-	<axis2.version>1.7.3</axis2.version>
-	<slf4j.version>1.7.21</slf4j.version>
+        <axis2.version>1.7.3</axis2.version>
+        <slf4j.version>1.7.21</slf4j.version>
         <junit.version>4.12</junit.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-   <developers>
+    <developers>
         <developer>
             <id>jefperito</id>
             <name>Jeferson Viana Perito</name>
@@ -52,7 +52,7 @@
     </developers>
 
     <dependencies>
-	<!-- Axis 2 -->
+        <!-- Axis 2 -->
         <dependency>
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2-kernel</artifactId>
