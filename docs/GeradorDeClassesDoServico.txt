@@ -1,0 +1,1 @@
+wsimport -keep -verbose -B-XautoNameResolution http://webservice.correios.com.br/service/rastro/Rastro.wsdl
