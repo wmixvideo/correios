@@ -1,22 +1,21 @@
 package com.github.wmixvideo.correios;
 
-import br.com.correios.webservice.resource.Eventos;
-import br.com.correios.webservice.resource.Objeto;
-import br.com.correios.webservice.resource.Sroxml;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Arrays;
 
 public class WSCorreiosTest {
 
+    private final WSCorreios WS = new WSCorreios("USUARIO", "SENHA");
+
+    @Test
+    public void consultaObjeto() throws Exception {
+        Assert.assertNotNull(WS.consultaObjeto("PJ907948743BR"));
+    }
+
     @Test
     public void consultaObjetos() throws Exception {
-        final WSCorreios ws = new WSCorreios("USUARIO", "SENHA");
-        final Sroxml sro = ws.consultaObjeto("PJ907948743BR");
-        for (Objeto objeto : sro.getObjeto()) {
-            System.out.println(objeto.getNome());
-            System.err.println(objeto.getErro());
-            for (Eventos evento : objeto.getEvento()) {
-                System.out.println(evento.getDescricao());
-            }
-        }
+        Assert.assertNotNull(WS.consultaObjetos(Arrays.asList("PJ907948743BR", "PJ907948743BR")));
     }
 }
