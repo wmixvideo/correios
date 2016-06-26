@@ -1,1 +1,2 @@
 wsimport -keep -verbose -B-XautoNameResolution http://webservice.correios.com.br/service/rastro/Rastro.wsdl
+wsimport -keep -verbose -B-XautoNameResolution http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?wsdl
