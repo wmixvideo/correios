@@ -7,10 +7,10 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de registroUnidades complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for registroUnidades complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="registroUnidades">
  *   &lt;complexContent>
@@ -28,16 +28,18 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "registroUnidades", propOrder = {
-        "codigoDR",
-        "codigoMCU",
-        "codigoSRO",
-        "nomeUnidade",
-        "siglaDR",
-        "siglaTipoUnidade",
-        "tipoUnidade"
+    "codigoDR",
+    "codigoMCU",
+    "codigoSRO",
+    "nomeUnidade",
+    "siglaDR",
+    "siglaTipoUnidade",
+    "tipoUnidade"
 })
 public class RegistroUnidades {
 
@@ -50,140 +52,168 @@ public class RegistroUnidades {
     protected String tipoUnidade;
 
     /**
-     * Obtém o valor da propriedade codigoDR.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the codigoDR property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCodigoDR() {
         return codigoDR;
     }
 
     /**
-     * Define o valor da propriedade codigoDR.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the codigoDR property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCodigoDR(String value) {
         this.codigoDR = value;
     }
 
     /**
-     * Obtém o valor da propriedade codigoMCU.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the codigoMCU property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCodigoMCU() {
         return codigoMCU;
     }
 
     /**
-     * Define o valor da propriedade codigoMCU.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the codigoMCU property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCodigoMCU(String value) {
         this.codigoMCU = value;
     }
 
     /**
-     * Obtém o valor da propriedade codigoSRO.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the codigoSRO property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCodigoSRO() {
         return codigoSRO;
     }
 
     /**
-     * Define o valor da propriedade codigoSRO.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the codigoSRO property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCodigoSRO(String value) {
         this.codigoSRO = value;
     }
 
     /**
-     * Obtém o valor da propriedade nomeUnidade.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the nomeUnidade property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNomeUnidade() {
         return nomeUnidade;
     }
 
     /**
-     * Define o valor da propriedade nomeUnidade.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the nomeUnidade property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNomeUnidade(String value) {
         this.nomeUnidade = value;
     }
 
     /**
-     * Obtém o valor da propriedade siglaDR.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the siglaDR property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getSiglaDR() {
         return siglaDR;
     }
 
     /**
-     * Define o valor da propriedade siglaDR.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the siglaDR property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setSiglaDR(String value) {
         this.siglaDR = value;
     }
 
     /**
-     * Obtém o valor da propriedade siglaTipoUnidade.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the siglaTipoUnidade property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getSiglaTipoUnidade() {
         return siglaTipoUnidade;
     }
 
     /**
-     * Define o valor da propriedade siglaTipoUnidade.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the siglaTipoUnidade property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setSiglaTipoUnidade(String value) {
         this.siglaTipoUnidade = value;
     }
 
     /**
-     * Obtém o valor da propriedade tipoUnidade.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the tipoUnidade property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTipoUnidade() {
         return tipoUnidade;
     }
 
     /**
-     * Define o valor da propriedade tipoUnidade.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the tipoUnidade property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTipoUnidade(String value) {
         this.tipoUnidade = value;

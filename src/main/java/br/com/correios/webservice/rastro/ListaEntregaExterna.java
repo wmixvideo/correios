@@ -7,10 +7,10 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de ListaEntregaExterna complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for ListaEntregaExterna complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="ListaEntregaExterna">
  *   &lt;complexContent>
@@ -22,30 +22,36 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ListaEntregaExterna", propOrder = {
-        "loec"
+    "loec"
 })
 public class ListaEntregaExterna {
 
     protected String loec;
 
     /**
-     * Obtém o valor da propriedade loec.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the loec property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLoec() {
         return loec;
     }
 
     /**
-     * Define o valor da propriedade loec.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the loec property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setLoec(String value) {
         this.loec = value;

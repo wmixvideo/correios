@@ -10,10 +10,10 @@ import java.util.List;
 
 
 /**
- * <p>Classe Java de UnidadesSROResponse complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for UnidadesSROResponse complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="UnidadesSROResponse">
  *   &lt;complexContent>
@@ -25,10 +25,12 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UnidadesSROResponse", propOrder = {
-        "_return"
+    "_return"
 })
 public class UnidadesSROResponse {
 
@@ -37,23 +39,25 @@ public class UnidadesSROResponse {
 
     /**
      * Gets the value of the return property.
-     * <p>
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the return property.
-     * <p>
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getReturn().add(newItem);
      * </pre>
-     * <p>
-     * <p>
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RegistroUnidades }
+     * 
+     * 
      */
     public List<RegistroUnidades> getReturn() {
         if (_return == null) {

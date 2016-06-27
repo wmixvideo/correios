@@ -10,10 +10,10 @@ import java.util.List;
 
 
 /**
- * <p>Classe Java de sroxml complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for sroxml complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="sroxml">
  *   &lt;complexContent>
@@ -29,14 +29,16 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "sroxml", propOrder = {
-        "versao",
-        "qtd",
-        "tipoPesquisa",
-        "tipoResultado",
-        "objeto"
+    "versao",
+    "qtd",
+    "tipoPesquisa",
+    "tipoResultado",
+    "objeto"
 })
 public class Sroxml {
 
@@ -50,80 +52,96 @@ public class Sroxml {
     protected List<Objeto> objeto;
 
     /**
-     * Obtém o valor da propriedade versao.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the versao property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getVersao() {
         return versao;
     }
 
     /**
-     * Define o valor da propriedade versao.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the versao property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setVersao(String value) {
         this.versao = value;
     }
 
     /**
-     * Obtém o valor da propriedade qtd.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the qtd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getQtd() {
         return qtd;
     }
 
     /**
-     * Define o valor da propriedade qtd.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the qtd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setQtd(String value) {
         this.qtd = value;
     }
 
     /**
-     * Obtém o valor da propriedade tipoPesquisa.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the tipoPesquisa property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTipoPesquisa() {
         return tipoPesquisa;
     }
 
     /**
-     * Define o valor da propriedade tipoPesquisa.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the tipoPesquisa property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTipoPesquisa(String value) {
         this.tipoPesquisa = value;
     }
 
     /**
-     * Obtém o valor da propriedade tipoResultado.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the tipoResultado property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getTipoResultado() {
         return tipoResultado;
     }
 
     /**
-     * Define o valor da propriedade tipoResultado.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the tipoResultado property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setTipoResultado(String value) {
         this.tipoResultado = value;
@@ -131,23 +149,25 @@ public class Sroxml {
 
     /**
      * Gets the value of the objeto property.
-     * <p>
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the objeto property.
-     * <p>
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getObjeto().add(newItem);
      * </pre>
-     * <p>
-     * <p>
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Objeto }
+     * 
+     * 
      */
     public List<Objeto> getObjeto() {
         if (objeto == null) {

@@ -10,10 +10,10 @@ import java.util.List;
 
 
 /**
- * <p>Classe Java de objeto complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for objeto complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="objeto">
  *   &lt;complexContent>
@@ -30,15 +30,17 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "objeto", propOrder = {
-        "numero",
-        "sigla",
-        "nome",
-        "categoria",
-        "erro",
-        "evento"
+    "numero",
+    "sigla",
+    "nome",
+    "categoria",
+    "erro",
+    "evento"
 })
 public class Objeto {
 
@@ -51,100 +53,120 @@ public class Objeto {
     protected List<Eventos> evento;
 
     /**
-     * Obtém o valor da propriedade numero.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the numero property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNumero() {
         return numero;
     }
 
     /**
-     * Define o valor da propriedade numero.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the numero property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNumero(String value) {
         this.numero = value;
     }
 
     /**
-     * Obtém o valor da propriedade sigla.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the sigla property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getSigla() {
         return sigla;
     }
 
     /**
-     * Define o valor da propriedade sigla.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the sigla property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setSigla(String value) {
         this.sigla = value;
     }
 
     /**
-     * Obtém o valor da propriedade nome.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the nome property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNome() {
         return nome;
     }
 
     /**
-     * Define o valor da propriedade nome.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the nome property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNome(String value) {
         this.nome = value;
     }
 
     /**
-     * Obtém o valor da propriedade categoria.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the categoria property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCategoria() {
         return categoria;
     }
 
     /**
-     * Define o valor da propriedade categoria.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the categoria property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCategoria(String value) {
         this.categoria = value;
     }
 
     /**
-     * Obtém o valor da propriedade erro.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the erro property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getErro() {
         return erro;
     }
 
     /**
-     * Define o valor da propriedade erro.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the erro property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setErro(String value) {
         this.erro = value;
@@ -152,23 +174,25 @@ public class Objeto {
 
     /**
      * Gets the value of the evento property.
-     * <p>
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the evento property.
-     * <p>
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEvento().add(newItem);
      * </pre>
-     * <p>
-     * <p>
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Eventos }
+     * 
+     * 
      */
     public List<Eventos> getEvento() {
         if (evento == null) {

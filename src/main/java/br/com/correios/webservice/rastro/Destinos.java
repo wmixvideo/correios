@@ -7,10 +7,10 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de destinos complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for destinos complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="destinos">
  *   &lt;complexContent>
@@ -26,14 +26,16 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "destinos", propOrder = {
-        "local",
-        "codigo",
-        "cidade",
-        "bairro",
-        "uf"
+    "local",
+    "codigo",
+    "cidade",
+    "bairro",
+    "uf"
 })
 public class Destinos {
 
@@ -44,100 +46,120 @@ public class Destinos {
     protected String uf;
 
     /**
-     * Obtém o valor da propriedade local.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the local property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getLocal() {
         return local;
     }
 
     /**
-     * Define o valor da propriedade local.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the local property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setLocal(String value) {
         this.local = value;
     }
 
     /**
-     * Obtém o valor da propriedade codigo.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the codigo property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCodigo() {
         return codigo;
     }
 
     /**
-     * Define o valor da propriedade codigo.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the codigo property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCodigo(String value) {
         this.codigo = value;
     }
 
     /**
-     * Obtém o valor da propriedade cidade.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the cidade property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCidade() {
         return cidade;
     }
 
     /**
-     * Define o valor da propriedade cidade.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the cidade property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCidade(String value) {
         this.cidade = value;
     }
 
     /**
-     * Obtém o valor da propriedade bairro.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the bairro property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getBairro() {
         return bairro;
     }
 
     /**
-     * Define o valor da propriedade bairro.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the bairro property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setBairro(String value) {
         this.bairro = value;
     }
 
     /**
-     * Obtém o valor da propriedade uf.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the uf property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getUf() {
         return uf;
     }
 
     /**
-     * Define o valor da propriedade uf.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the uf property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setUf(String value) {
         this.uf = value;

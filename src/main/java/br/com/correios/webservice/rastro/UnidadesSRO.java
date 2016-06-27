@@ -7,10 +7,10 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de UnidadesSRO complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for UnidadesSRO complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="UnidadesSRO">
  *   &lt;complexContent>
@@ -22,30 +22,36 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UnidadesSRO", propOrder = {
-        "codigoSRO"
+    "codigoSRO"
 })
 public class UnidadesSRO {
 
     protected String codigoSRO;
 
     /**
-     * Obtém o valor da propriedade codigoSRO.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the codigoSRO property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getCodigoSRO() {
         return codigoSRO;
     }
 
     /**
-     * Define o valor da propriedade codigoSRO.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the codigoSRO property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setCodigoSRO(String value) {
         this.codigoSRO = value;

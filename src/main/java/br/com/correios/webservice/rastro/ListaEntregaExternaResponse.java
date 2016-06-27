@@ -8,10 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de ListaEntregaExternaResponse complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for ListaEntregaExternaResponse complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="ListaEntregaExternaResponse">
  *   &lt;complexContent>
@@ -23,10 +23,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ListaEntregaExternaResponse", propOrder = {
-        "_return"
+    "_return"
 })
 public class ListaEntregaExternaResponse {
 
@@ -34,20 +36,24 @@ public class ListaEntregaExternaResponse {
     protected ListaEntregaExterna2 _return;
 
     /**
-     * Obtém o valor da propriedade return.
-     *
-     * @return possible object is
-     * {@link ListaEntregaExterna2 }
+     * Gets the value of the return property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ListaEntregaExterna2 }
+     *     
      */
     public ListaEntregaExterna2 getReturn() {
         return _return;
     }
 
     /**
-     * Define o valor da propriedade return.
-     *
-     * @param value allowed object is
-     *              {@link ListaEntregaExterna2 }
+     * Sets the value of the return property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ListaEntregaExterna2 }
+     *     
      */
     public void setReturn(ListaEntregaExterna2 value) {
         this._return = value;

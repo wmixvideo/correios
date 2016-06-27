@@ -7,10 +7,10 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de objetoPostal complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for objetoPostal complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="objetoPostal">
  *   &lt;complexContent>
@@ -27,15 +27,17 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "objetoPostal", propOrder = {
-        "agrupamento",
-        "avisoRecebimento",
-        "devolucaoDocumento",
-        "devolucaoObjeto",
-        "maoPropria",
-        "numeroObjeto"
+    "agrupamento",
+    "avisoRecebimento",
+    "devolucaoDocumento",
+    "devolucaoObjeto",
+    "maoPropria",
+    "numeroObjeto"
 })
 public class ObjetoPostal {
 
@@ -47,120 +49,144 @@ public class ObjetoPostal {
     protected String numeroObjeto;
 
     /**
-     * Obtém o valor da propriedade agrupamento.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the agrupamento property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getAgrupamento() {
         return agrupamento;
     }
 
     /**
-     * Define o valor da propriedade agrupamento.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the agrupamento property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setAgrupamento(String value) {
         this.agrupamento = value;
     }
 
     /**
-     * Obtém o valor da propriedade avisoRecebimento.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the avisoRecebimento property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getAvisoRecebimento() {
         return avisoRecebimento;
     }
 
     /**
-     * Define o valor da propriedade avisoRecebimento.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the avisoRecebimento property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setAvisoRecebimento(String value) {
         this.avisoRecebimento = value;
     }
 
     /**
-     * Obtém o valor da propriedade devolucaoDocumento.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the devolucaoDocumento property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDevolucaoDocumento() {
         return devolucaoDocumento;
     }
 
     /**
-     * Define o valor da propriedade devolucaoDocumento.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the devolucaoDocumento property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDevolucaoDocumento(String value) {
         this.devolucaoDocumento = value;
     }
 
     /**
-     * Obtém o valor da propriedade devolucaoObjeto.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the devolucaoObjeto property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getDevolucaoObjeto() {
         return devolucaoObjeto;
     }
 
     /**
-     * Define o valor da propriedade devolucaoObjeto.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the devolucaoObjeto property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setDevolucaoObjeto(String value) {
         this.devolucaoObjeto = value;
     }
 
     /**
-     * Obtém o valor da propriedade maoPropria.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the maoPropria property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getMaoPropria() {
         return maoPropria;
     }
 
     /**
-     * Define o valor da propriedade maoPropria.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the maoPropria property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setMaoPropria(String value) {
         this.maoPropria = value;
     }
 
     /**
-     * Obtém o valor da propriedade numeroObjeto.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the numeroObjeto property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getNumeroObjeto() {
         return numeroObjeto;
     }
 
     /**
-     * Define o valor da propriedade numeroObjeto.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the numeroObjeto property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setNumeroObjeto(String value) {
         this.numeroObjeto = value;

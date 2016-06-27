@@ -8,10 +8,10 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de RastroJsonResponse complex type.
- * <p>
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * <p>Java class for RastroJsonResponse complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
  * <pre>
  * &lt;complexType name="RastroJsonResponse">
  *   &lt;complexContent>
@@ -23,10 +23,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RastroJsonResponse", propOrder = {
-        "_return"
+    "_return"
 })
 public class RastroJsonResponse {
 
@@ -34,20 +36,24 @@ public class RastroJsonResponse {
     protected String _return;
 
     /**
-     * Obtém o valor da propriedade return.
-     *
-     * @return possible object is
-     * {@link String }
+     * Gets the value of the return property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
     public String getReturn() {
         return _return;
     }
 
     /**
-     * Define o valor da propriedade return.
-     *
-     * @param value allowed object is
-     *              {@link String }
+     * Sets the value of the return property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
     public void setReturn(String value) {
         this._return = value;
