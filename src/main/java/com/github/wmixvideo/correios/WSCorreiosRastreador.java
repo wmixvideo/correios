@@ -8,9 +8,9 @@ import java.util.Collection;
 
 public class WSCorreiosRastreador {
 
-    private static final String TIPO = "L";
-    private static final String RESULTADO = "T";
-    private static final String LINGUA = "";
+    private static final String TIPO = "L";//todos
+    private static final String RESULTADO = "T";//todos
+    private static final String LINGUA = "101";//portugues
 
     private final Service service;
     private final String usuario;
