@@ -28,6 +28,6 @@ public class WSCorreiosRastreador {
     }
 
     public Sroxml consultaObjetos(final Collection<String> objetos) {
-        return this.service.buscaEventos(this.usuario, this.senha, TIPO, RESULTADO, LINGUA, String.join(",", objetos));
+        return this.service.buscaEventos(this.usuario, this.senha, TIPO, RESULTADO, LINGUA, String.join("", objetos));
     }
 }
