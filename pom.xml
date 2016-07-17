@@ -105,6 +105,14 @@
                     <showDeprecation>true</showDeprecation>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>4.0.0</version>
+                <configuration>
+                    <repoToken>Yeo1Mws7rziaIG0UgqTLkgRp66RECCjUs</repoToken>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
