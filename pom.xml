@@ -7,7 +7,7 @@
     <groupId>com.github.wmixvideo</groupId>
     <artifactId>correios</artifactId>
     <packaging>jar</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1.1-SNAPSHOT</version>
     <name>correios</name>
     <url>https://github.com/wmixlabs/correios</url>
 

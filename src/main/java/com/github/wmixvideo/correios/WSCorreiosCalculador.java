@@ -26,13 +26,13 @@ public class WSCorreiosCalculador {
         this.senha = senha;
     }
 
-    final int calculaPrazo(final String servico, final String origem, final String destino) {
+    public final int calculaPrazo(final String servico, final String origem, final String destino) {
         final CResultado retornoCorreios = calculadora.calcPrazo(servico, origem, destino);
         final List<CServico> servicos = retornoCorreios.getServicos().getCServico();
         return servicos.isEmpty() ? 0 : Integer.parseInt(servicos.get(0).getPrazoEntrega());
     }
 
-    final BigDecimal calculaPreco(final String servico, final String origem, final String destino) {
+    public final BigDecimal calculaPreco(final String servico, final String origem, final String destino) {
         final CResultado retornoCorreios = calculadora.calcPreco(this.usuario, this.senha, servico, origem, destino, null, 0, null, null, null, null, null, null, null);
         final List<CServico> servicos = retornoCorreios.getServicos().getCServico();
         return servicos.isEmpty() ? null : new BigDecimal(servicos.get(0).getValor());
