@@ -10,9 +10,9 @@ import java.util.List;
 
 
 /**
- * <p>Java class for sroxml complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de sroxml complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="sroxml">
@@ -23,7 +23,7 @@ import java.util.List;
  *         &lt;element name="qtd" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="TipoPesquisa" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="TipoResultado" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element ref="{http://resource.webservice.correios.com.br/}objeto" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="objeto" type="{http://resource.webservice.correios.com.br/}objeto" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -48,11 +48,10 @@ public class Sroxml {
     protected String tipoPesquisa;
     @XmlElement(name = "TipoResultado")
     protected String tipoResultado;
-    @XmlElement(namespace = "http://resource.webservice.correios.com.br/")
     protected List<Objeto> objeto;
 
     /**
-     * Gets the value of the versao property.
+     * Obtém o valor da propriedade versao.
      * 
      * @return
      *     possible object is
@@ -64,7 +63,7 @@ public class Sroxml {
     }
 
     /**
-     * Sets the value of the versao property.
+     * Define o valor da propriedade versao.
      * 
      * @param value
      *     allowed object is
@@ -76,7 +75,7 @@ public class Sroxml {
     }
 
     /**
-     * Gets the value of the qtd property.
+     * Obtém o valor da propriedade qtd.
      * 
      * @return
      *     possible object is
@@ -88,7 +87,7 @@ public class Sroxml {
     }
 
     /**
-     * Sets the value of the qtd property.
+     * Define o valor da propriedade qtd.
      * 
      * @param value
      *     allowed object is
@@ -100,7 +99,7 @@ public class Sroxml {
     }
 
     /**
-     * Gets the value of the tipoPesquisa property.
+     * Obtém o valor da propriedade tipoPesquisa.
      * 
      * @return
      *     possible object is
@@ -112,7 +111,7 @@ public class Sroxml {
     }
 
     /**
-     * Sets the value of the tipoPesquisa property.
+     * Define o valor da propriedade tipoPesquisa.
      * 
      * @param value
      *     allowed object is
@@ -124,7 +123,7 @@ public class Sroxml {
     }
 
     /**
-     * Gets the value of the tipoResultado property.
+     * Obtém o valor da propriedade tipoResultado.
      * 
      * @return
      *     possible object is
@@ -136,7 +135,7 @@ public class Sroxml {
     }
 
     /**
-     * Sets the value of the tipoResultado property.
+     * Define o valor da propriedade tipoResultado.
      * 
      * @param value
      *     allowed object is

@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for buscaEventosResponse complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de buscaEventosResponse complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="buscaEventosResponse">
@@ -33,29 +33,29 @@ import javax.xml.bind.annotation.XmlType;
 public class BuscaEventosResponse {
 
     @XmlElement(name = "return")
-    protected br.com.correios.webservice.rastro.Sroxml _return;
+    protected Sroxml _return;
 
     /**
-     * Gets the value of the return property.
+     * Obtém o valor da propriedade return.
      * 
      * @return
      *     possible object is
      *     {@link Sroxml }
      *     
      */
-    public br.com.correios.webservice.rastro.Sroxml getReturn() {
+    public Sroxml getReturn() {
         return _return;
     }
 
     /**
-     * Sets the value of the return property.
+     * Define o valor da propriedade return.
      * 
      * @param value
      *     allowed object is
      *     {@link Sroxml }
      *     
      */
-    public void setReturn(br.com.correios.webservice.rastro.Sroxml value) {
+    public void setReturn(Sroxml value) {
         this._return = value;
     }
 

@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for destinos complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de destinos complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="destinos">
@@ -46,7 +46,7 @@ public class Destinos {
     protected String uf;
 
     /**
-     * Gets the value of the local property.
+     * Obtém o valor da propriedade local.
      * 
      * @return
      *     possible object is
@@ -58,7 +58,7 @@ public class Destinos {
     }
 
     /**
-     * Sets the value of the local property.
+     * Define o valor da propriedade local.
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class Destinos {
     }
 
     /**
-     * Gets the value of the codigo property.
+     * Obtém o valor da propriedade codigo.
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class Destinos {
     }
 
     /**
-     * Sets the value of the codigo property.
+     * Define o valor da propriedade codigo.
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class Destinos {
     }
 
     /**
-     * Gets the value of the cidade property.
+     * Obtém o valor da propriedade cidade.
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class Destinos {
     }
 
     /**
-     * Sets the value of the cidade property.
+     * Define o valor da propriedade cidade.
      * 
      * @param value
      *     allowed object is
@@ -118,7 +118,7 @@ public class Destinos {
     }
 
     /**
-     * Gets the value of the bairro property.
+     * Obtém o valor da propriedade bairro.
      * 
      * @return
      *     possible object is
@@ -130,7 +130,7 @@ public class Destinos {
     }
 
     /**
-     * Sets the value of the bairro property.
+     * Define o valor da propriedade bairro.
      * 
      * @param value
      *     allowed object is
@@ -142,7 +142,7 @@ public class Destinos {
     }
 
     /**
-     * Gets the value of the uf property.
+     * Obtém o valor da propriedade uf.
      * 
      * @return
      *     possible object is
@@ -154,7 +154,7 @@ public class Destinos {
     }
 
     /**
-     * Sets the value of the uf property.
+     * Define o valor da propriedade uf.
      * 
      * @param value
      *     allowed object is

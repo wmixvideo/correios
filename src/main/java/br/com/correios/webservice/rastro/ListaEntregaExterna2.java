@@ -1,20 +1,16 @@
 
 package br.com.correios.webservice.rastro;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
 
 
 /**
- * <p>Java class for listaEntregaExterna complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de listaEntregaExterna complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="listaEntregaExterna">
@@ -64,11 +60,11 @@ public class ListaEntregaExterna2 {
     protected String nomeCarteiro;
     protected String nomeUnidade;
     @XmlElement(nillable = true)
-    protected List<br.com.correios.webservice.rastro.ObjetoPostal> objetos;
+    protected List<ObjetoPostal> objetos;
     protected String unidade;
 
     /**
-     * Gets the value of the carteiro property.
+     * Obtém o valor da propriedade carteiro.
      * 
      * @return
      *     possible object is
@@ -80,7 +76,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Sets the value of the carteiro property.
+     * Define o valor da propriedade carteiro.
      * 
      * @param value
      *     allowed object is
@@ -92,7 +88,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Gets the value of the data property.
+     * Obtém o valor da propriedade data.
      * 
      * @return
      *     possible object is
@@ -104,7 +100,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Sets the value of the data property.
+     * Define o valor da propriedade data.
      * 
      * @param value
      *     allowed object is
@@ -116,7 +112,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Gets the value of the distrito property.
+     * Obtém o valor da propriedade distrito.
      * 
      * @return
      *     possible object is
@@ -128,7 +124,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Sets the value of the distrito property.
+     * Define o valor da propriedade distrito.
      * 
      * @param value
      *     allowed object is
@@ -140,7 +136,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Gets the value of the estacao property.
+     * Obtém o valor da propriedade estacao.
      * 
      * @return
      *     possible object is
@@ -152,7 +148,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Sets the value of the estacao property.
+     * Define o valor da propriedade estacao.
      * 
      * @param value
      *     allowed object is
@@ -164,7 +160,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Gets the value of the id property.
+     * Obtém o valor da propriedade id.
      * 
      * @return
      *     possible object is
@@ -176,7 +172,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Sets the value of the id property.
+     * Define o valor da propriedade id.
      * 
      * @param value
      *     allowed object is
@@ -188,7 +184,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Gets the value of the loec property.
+     * Obtém o valor da propriedade loec.
      * 
      * @return
      *     possible object is
@@ -200,7 +196,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Sets the value of the loec property.
+     * Define o valor da propriedade loec.
      * 
      * @param value
      *     allowed object is
@@ -212,7 +208,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Gets the value of the nomeCarteiro property.
+     * Obtém o valor da propriedade nomeCarteiro.
      * 
      * @return
      *     possible object is
@@ -224,7 +220,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Sets the value of the nomeCarteiro property.
+     * Define o valor da propriedade nomeCarteiro.
      * 
      * @param value
      *     allowed object is
@@ -236,7 +232,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Gets the value of the nomeUnidade property.
+     * Obtém o valor da propriedade nomeUnidade.
      * 
      * @return
      *     possible object is
@@ -248,7 +244,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Sets the value of the nomeUnidade property.
+     * Define o valor da propriedade nomeUnidade.
      * 
      * @param value
      *     allowed object is
@@ -281,15 +277,15 @@ public class ListaEntregaExterna2 {
      * 
      * 
      */
-    public List<br.com.correios.webservice.rastro.ObjetoPostal> getObjetos() {
+    public List<ObjetoPostal> getObjetos() {
         if (objetos == null) {
-            objetos = new ArrayList<br.com.correios.webservice.rastro.ObjetoPostal>();
+            objetos = new ArrayList<ObjetoPostal>();
         }
         return this.objetos;
     }
 
     /**
-     * Gets the value of the unidade property.
+     * Obtém o valor da propriedade unidade.
      * 
      * @return
      *     possible object is
@@ -301,7 +297,7 @@ public class ListaEntregaExterna2 {
     }
 
     /**
-     * Sets the value of the unidade property.
+     * Define o valor da propriedade unidade.
      * 
      * @param value
      *     allowed object is

@@ -16,7 +16,7 @@ import java.net.URL;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "rastro", targetNamespace = "http://resource.webservice.correios.com.br/", wsdlLocation = "http://webservice.correios.com.br/service/rastro/Rastro.wsdl")
+@WebServiceClient(name = "rastro", targetNamespace = "http://resource.webservice.correios.com.br/", wsdlLocation = "file:/Users/diego/Sources/Idea/correios/docs/Rastro.wsdl")
 public class Rastro
     extends javax.xml.ws.Service
 {
@@ -29,7 +29,7 @@ public class Rastro
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://webservice.correios.com.br/service/rastro/Rastro.wsdl");
+            url = new URL("file:/Users/diego/Sources/Idea/correios/docs/Rastro.wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

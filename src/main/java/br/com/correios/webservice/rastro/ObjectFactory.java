@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the br.com.correios.webservice.resource package. 
+ * generated in the br.com.correios.webservice.rastro package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -41,7 +41,7 @@ public class ObjectFactory {
     private final static QName _Destino_QNAME = new QName("http://resource.webservice.correios.com.br/", "destino");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: br.com.correios.webservice.resource
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: br.com.correios.webservice.rastro
      * 
      */
     public ObjectFactory() {
@@ -51,96 +51,96 @@ public class ObjectFactory {
      * Create an instance of {@link UnidadesSRO }
      * 
      */
-    public br.com.correios.webservice.rastro.UnidadesSRO createUnidadesSRO() {
-        return new br.com.correios.webservice.rastro.UnidadesSRO();
+    public UnidadesSRO createUnidadesSRO() {
+        return new UnidadesSRO();
     }
 
     /**
      * Create an instance of {@link RastroJson }
      * 
      */
-    public br.com.correios.webservice.rastro.RastroJson createRastroJson() {
-        return new br.com.correios.webservice.rastro.RastroJson();
+    public RastroJson createRastroJson() {
+        return new RastroJson();
     }
 
     /**
      * Create an instance of {@link EnderecoMobile }
      * 
      */
-    public br.com.correios.webservice.rastro.EnderecoMobile createEnderecoMobile() {
-        return new br.com.correios.webservice.rastro.EnderecoMobile();
+    public EnderecoMobile createEnderecoMobile() {
+        return new EnderecoMobile();
     }
 
     /**
      * Create an instance of {@link UnidadesSROResponse }
      * 
      */
-    public br.com.correios.webservice.rastro.UnidadesSROResponse createUnidadesSROResponse() {
-        return new br.com.correios.webservice.rastro.UnidadesSROResponse();
+    public UnidadesSROResponse createUnidadesSROResponse() {
+        return new UnidadesSROResponse();
     }
 
     /**
      * Create an instance of {@link Objeto }
      * 
      */
-    public br.com.correios.webservice.rastro.Objeto createObjeto() {
-        return new br.com.correios.webservice.rastro.Objeto();
+    public Objeto createObjeto() {
+        return new Objeto();
     }
 
     /**
      * Create an instance of {@link ListaEntregaExternaResponse }
      * 
      */
-    public br.com.correios.webservice.rastro.ListaEntregaExternaResponse createListaEntregaExternaResponse() {
-        return new br.com.correios.webservice.rastro.ListaEntregaExternaResponse();
+    public ListaEntregaExternaResponse createListaEntregaExternaResponse() {
+        return new ListaEntregaExternaResponse();
     }
 
     /**
      * Create an instance of {@link BuscaEventosLista }
      * 
      */
-    public br.com.correios.webservice.rastro.BuscaEventosLista createBuscaEventosLista() {
-        return new br.com.correios.webservice.rastro.BuscaEventosLista();
+    public BuscaEventosLista createBuscaEventosLista() {
+        return new BuscaEventosLista();
     }
 
     /**
      * Create an instance of {@link Eventos }
      * 
      */
-    public br.com.correios.webservice.rastro.Eventos createEventos() {
-        return new br.com.correios.webservice.rastro.Eventos();
+    public Eventos createEventos() {
+        return new Eventos();
     }
 
     /**
      * Create an instance of {@link RastroJsonResponse }
      * 
      */
-    public br.com.correios.webservice.rastro.RastroJsonResponse createRastroJsonResponse() {
-        return new br.com.correios.webservice.rastro.RastroJsonResponse();
+    public RastroJsonResponse createRastroJsonResponse() {
+        return new RastroJsonResponse();
     }
 
     /**
      * Create an instance of {@link ListaEntregaExterna }
      * 
      */
-    public br.com.correios.webservice.rastro.ListaEntregaExterna createListaEntregaExterna() {
-        return new br.com.correios.webservice.rastro.ListaEntregaExterna();
+    public ListaEntregaExterna createListaEntregaExterna() {
+        return new ListaEntregaExterna();
     }
 
     /**
      * Create an instance of {@link Sroxml }
      * 
      */
-    public br.com.correios.webservice.rastro.Sroxml createSroxml() {
-        return new br.com.correios.webservice.rastro.Sroxml();
+    public Sroxml createSroxml() {
+        return new Sroxml();
     }
 
     /**
      * Create an instance of {@link BuscaEventos }
      * 
      */
-    public br.com.correios.webservice.rastro.BuscaEventos createBuscaEventos() {
-        return new br.com.correios.webservice.rastro.BuscaEventos();
+    public BuscaEventos createBuscaEventos() {
+        return new BuscaEventos();
     }
 
     /**
@@ -155,40 +155,40 @@ public class ObjectFactory {
      * Create an instance of {@link Destinos }
      * 
      */
-    public br.com.correios.webservice.rastro.Destinos createDestinos() {
-        return new br.com.correios.webservice.rastro.Destinos();
+    public Destinos createDestinos() {
+        return new Destinos();
     }
 
     /**
      * Create an instance of {@link BuscaEventosResponse }
      * 
      */
-    public br.com.correios.webservice.rastro.BuscaEventosResponse createBuscaEventosResponse() {
-        return new br.com.correios.webservice.rastro.BuscaEventosResponse();
+    public BuscaEventosResponse createBuscaEventosResponse() {
+        return new BuscaEventosResponse();
     }
 
     /**
      * Create an instance of {@link RegistroUnidades }
      * 
      */
-    public br.com.correios.webservice.rastro.RegistroUnidades createRegistroUnidades() {
-        return new br.com.correios.webservice.rastro.RegistroUnidades();
+    public RegistroUnidades createRegistroUnidades() {
+        return new RegistroUnidades();
     }
 
     /**
      * Create an instance of {@link ListaEntregaExterna2 }
      * 
      */
-    public br.com.correios.webservice.rastro.ListaEntregaExterna2 createListaEntregaExterna2() {
-        return new br.com.correios.webservice.rastro.ListaEntregaExterna2();
+    public ListaEntregaExterna2 createListaEntregaExterna2() {
+        return new ListaEntregaExterna2();
     }
 
     /**
      * Create an instance of {@link ObjetoPostal }
      * 
      */
-    public br.com.correios.webservice.rastro.ObjetoPostal createObjetoPostal() {
-        return new br.com.correios.webservice.rastro.ObjetoPostal();
+    public ObjetoPostal createObjetoPostal() {
+        return new ObjetoPostal();
     }
 
     /**
@@ -196,8 +196,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "endereco")
-    public JAXBElement<br.com.correios.webservice.rastro.EnderecoMobile> createEndereco(br.com.correios.webservice.rastro.EnderecoMobile value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.EnderecoMobile>(_Endereco_QNAME, br.com.correios.webservice.rastro.EnderecoMobile.class, null, value);
+    public JAXBElement<EnderecoMobile> createEndereco(EnderecoMobile value) {
+        return new JAXBElement<EnderecoMobile>(_Endereco_QNAME, EnderecoMobile.class, null, value);
     }
 
     /**
@@ -205,8 +205,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "UnidadesSROResponse")
-    public JAXBElement<br.com.correios.webservice.rastro.UnidadesSROResponse> createUnidadesSROResponse(br.com.correios.webservice.rastro.UnidadesSROResponse value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.UnidadesSROResponse>(_UnidadesSROResponse_QNAME, br.com.correios.webservice.rastro.UnidadesSROResponse.class, null, value);
+    public JAXBElement<UnidadesSROResponse> createUnidadesSROResponse(UnidadesSROResponse value) {
+        return new JAXBElement<UnidadesSROResponse>(_UnidadesSROResponse_QNAME, UnidadesSROResponse.class, null, value);
     }
 
     /**
@@ -214,8 +214,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "UnidadesSRO")
-    public JAXBElement<br.com.correios.webservice.rastro.UnidadesSRO> createUnidadesSRO(br.com.correios.webservice.rastro.UnidadesSRO value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.UnidadesSRO>(_UnidadesSRO_QNAME, br.com.correios.webservice.rastro.UnidadesSRO.class, null, value);
+    public JAXBElement<UnidadesSRO> createUnidadesSRO(UnidadesSRO value) {
+        return new JAXBElement<UnidadesSRO>(_UnidadesSRO_QNAME, UnidadesSRO.class, null, value);
     }
 
     /**
@@ -223,8 +223,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "RastroJson")
-    public JAXBElement<br.com.correios.webservice.rastro.RastroJson> createRastroJson(br.com.correios.webservice.rastro.RastroJson value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.RastroJson>(_RastroJson_QNAME, br.com.correios.webservice.rastro.RastroJson.class, null, value);
+    public JAXBElement<RastroJson> createRastroJson(RastroJson value) {
+        return new JAXBElement<RastroJson>(_RastroJson_QNAME, RastroJson.class, null, value);
     }
 
     /**
@@ -232,8 +232,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "ListaEntregaExternaResponse")
-    public JAXBElement<br.com.correios.webservice.rastro.ListaEntregaExternaResponse> createListaEntregaExternaResponse(br.com.correios.webservice.rastro.ListaEntregaExternaResponse value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.ListaEntregaExternaResponse>(_ListaEntregaExternaResponse_QNAME, br.com.correios.webservice.rastro.ListaEntregaExternaResponse.class, null, value);
+    public JAXBElement<ListaEntregaExternaResponse> createListaEntregaExternaResponse(ListaEntregaExternaResponse value) {
+        return new JAXBElement<ListaEntregaExternaResponse>(_ListaEntregaExternaResponse_QNAME, ListaEntregaExternaResponse.class, null, value);
     }
 
     /**
@@ -241,8 +241,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "objeto")
-    public JAXBElement<br.com.correios.webservice.rastro.Objeto> createObjeto(br.com.correios.webservice.rastro.Objeto value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.Objeto>(_Objeto_QNAME, br.com.correios.webservice.rastro.Objeto.class, null, value);
+    public JAXBElement<Objeto> createObjeto(Objeto value) {
+        return new JAXBElement<Objeto>(_Objeto_QNAME, Objeto.class, null, value);
     }
 
     /**
@@ -250,8 +250,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "ListaEntregaExterna")
-    public JAXBElement<br.com.correios.webservice.rastro.ListaEntregaExterna> createListaEntregaExterna(br.com.correios.webservice.rastro.ListaEntregaExterna value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.ListaEntregaExterna>(_ListaEntregaExterna_QNAME, br.com.correios.webservice.rastro.ListaEntregaExterna.class, null, value);
+    public JAXBElement<ListaEntregaExterna> createListaEntregaExterna(ListaEntregaExterna value) {
+        return new JAXBElement<ListaEntregaExterna>(_ListaEntregaExterna_QNAME, ListaEntregaExterna.class, null, value);
     }
 
     /**
@@ -259,8 +259,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "buscaEventosLista")
-    public JAXBElement<br.com.correios.webservice.rastro.BuscaEventosLista> createBuscaEventosLista(br.com.correios.webservice.rastro.BuscaEventosLista value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.BuscaEventosLista>(_BuscaEventosLista_QNAME, br.com.correios.webservice.rastro.BuscaEventosLista.class, null, value);
+    public JAXBElement<BuscaEventosLista> createBuscaEventosLista(BuscaEventosLista value) {
+        return new JAXBElement<BuscaEventosLista>(_BuscaEventosLista_QNAME, BuscaEventosLista.class, null, value);
     }
 
     /**
@@ -268,8 +268,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "evento")
-    public JAXBElement<br.com.correios.webservice.rastro.Eventos> createEvento(br.com.correios.webservice.rastro.Eventos value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.Eventos>(_Evento_QNAME, br.com.correios.webservice.rastro.Eventos.class, null, value);
+    public JAXBElement<Eventos> createEvento(Eventos value) {
+        return new JAXBElement<Eventos>(_Evento_QNAME, Eventos.class, null, value);
     }
 
     /**
@@ -277,8 +277,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "RastroJsonResponse")
-    public JAXBElement<br.com.correios.webservice.rastro.RastroJsonResponse> createRastroJsonResponse(br.com.correios.webservice.rastro.RastroJsonResponse value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.RastroJsonResponse>(_RastroJsonResponse_QNAME, br.com.correios.webservice.rastro.RastroJsonResponse.class, null, value);
+    public JAXBElement<RastroJsonResponse> createRastroJsonResponse(RastroJsonResponse value) {
+        return new JAXBElement<RastroJsonResponse>(_RastroJsonResponse_QNAME, RastroJsonResponse.class, null, value);
     }
 
     /**
@@ -286,8 +286,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "buscaEventosResponse")
-    public JAXBElement<br.com.correios.webservice.rastro.BuscaEventosResponse> createBuscaEventosResponse(br.com.correios.webservice.rastro.BuscaEventosResponse value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.BuscaEventosResponse>(_BuscaEventosResponse_QNAME, br.com.correios.webservice.rastro.BuscaEventosResponse.class, null, value);
+    public JAXBElement<BuscaEventosResponse> createBuscaEventosResponse(BuscaEventosResponse value) {
+        return new JAXBElement<BuscaEventosResponse>(_BuscaEventosResponse_QNAME, BuscaEventosResponse.class, null, value);
     }
 
     /**
@@ -295,8 +295,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "rastro")
-    public JAXBElement<br.com.correios.webservice.rastro.Sroxml> createRastro(br.com.correios.webservice.rastro.Sroxml value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.Sroxml>(_Rastro_QNAME, br.com.correios.webservice.rastro.Sroxml.class, null, value);
+    public JAXBElement<Sroxml> createRastro(Sroxml value) {
+        return new JAXBElement<Sroxml>(_Rastro_QNAME, Sroxml.class, null, value);
     }
 
     /**
@@ -304,8 +304,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "buscaEventos")
-    public JAXBElement<br.com.correios.webservice.rastro.BuscaEventos> createBuscaEventos(br.com.correios.webservice.rastro.BuscaEventos value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.BuscaEventos>(_BuscaEventos_QNAME, br.com.correios.webservice.rastro.BuscaEventos.class, null, value);
+    public JAXBElement<BuscaEventos> createBuscaEventos(BuscaEventos value) {
+        return new JAXBElement<BuscaEventos>(_BuscaEventos_QNAME, BuscaEventos.class, null, value);
     }
 
     /**
@@ -322,8 +322,8 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://resource.webservice.correios.com.br/", name = "destino")
-    public JAXBElement<br.com.correios.webservice.rastro.Destinos> createDestino(br.com.correios.webservice.rastro.Destinos value) {
-        return new JAXBElement<br.com.correios.webservice.rastro.Destinos>(_Destino_QNAME, br.com.correios.webservice.rastro.Destinos.class, null, value);
+    public JAXBElement<Destinos> createDestino(Destinos value) {
+        return new JAXBElement<Destinos>(_Destino_QNAME, Destinos.class, null, value);
     }
 
 }

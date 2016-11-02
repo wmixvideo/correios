@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ListaEntregaExterna complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de ListaEntregaExterna complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="ListaEntregaExterna">
@@ -34,7 +34,7 @@ public class ListaEntregaExterna {
     protected String loec;
 
     /**
-     * Gets the value of the loec property.
+     * Obtém o valor da propriedade loec.
      * 
      * @return
      *     possible object is
@@ -46,7 +46,7 @@ public class ListaEntregaExterna {
     }
 
     /**
-     * Sets the value of the loec property.
+     * Define o valor da propriedade loec.
      * 
      * @param value
      *     allowed object is

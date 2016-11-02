@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for UnidadesSRO complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de UnidadesSRO complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="UnidadesSRO">
@@ -34,7 +34,7 @@ public class UnidadesSRO {
     protected String codigoSRO;
 
     /**
-     * Gets the value of the codigoSRO property.
+     * Obtém o valor da propriedade codigoSRO.
      * 
      * @return
      *     possible object is
@@ -46,7 +46,7 @@ public class UnidadesSRO {
     }
 
     /**
-     * Sets the value of the codigoSRO property.
+     * Define o valor da propriedade codigoSRO.
      * 
      * @param value
      *     allowed object is

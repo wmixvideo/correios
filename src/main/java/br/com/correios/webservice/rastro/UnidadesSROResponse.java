@@ -10,9 +10,9 @@ import java.util.List;
 
 
 /**
- * <p>Java class for UnidadesSROResponse complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de UnidadesSROResponse complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="UnidadesSROResponse">

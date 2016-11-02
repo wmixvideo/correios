@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for objetoPostal complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de objetoPostal complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="objetoPostal">
@@ -49,7 +49,7 @@ public class ObjetoPostal {
     protected String numeroObjeto;
 
     /**
-     * Gets the value of the agrupamento property.
+     * Obtém o valor da propriedade agrupamento.
      * 
      * @return
      *     possible object is
@@ -61,7 +61,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Sets the value of the agrupamento property.
+     * Define o valor da propriedade agrupamento.
      * 
      * @param value
      *     allowed object is
@@ -73,7 +73,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Gets the value of the avisoRecebimento property.
+     * Obtém o valor da propriedade avisoRecebimento.
      * 
      * @return
      *     possible object is
@@ -85,7 +85,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Sets the value of the avisoRecebimento property.
+     * Define o valor da propriedade avisoRecebimento.
      * 
      * @param value
      *     allowed object is
@@ -97,7 +97,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Gets the value of the devolucaoDocumento property.
+     * Obtém o valor da propriedade devolucaoDocumento.
      * 
      * @return
      *     possible object is
@@ -109,7 +109,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Sets the value of the devolucaoDocumento property.
+     * Define o valor da propriedade devolucaoDocumento.
      * 
      * @param value
      *     allowed object is
@@ -121,7 +121,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Gets the value of the devolucaoObjeto property.
+     * Obtém o valor da propriedade devolucaoObjeto.
      * 
      * @return
      *     possible object is
@@ -133,7 +133,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Sets the value of the devolucaoObjeto property.
+     * Define o valor da propriedade devolucaoObjeto.
      * 
      * @param value
      *     allowed object is
@@ -145,7 +145,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Gets the value of the maoPropria property.
+     * Obtém o valor da propriedade maoPropria.
      * 
      * @return
      *     possible object is
@@ -157,7 +157,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Sets the value of the maoPropria property.
+     * Define o valor da propriedade maoPropria.
      * 
      * @param value
      *     allowed object is
@@ -169,7 +169,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Gets the value of the numeroObjeto property.
+     * Obtém o valor da propriedade numeroObjeto.
      * 
      * @return
      *     possible object is
@@ -181,7 +181,7 @@ public class ObjetoPostal {
     }
 
     /**
-     * Sets the value of the numeroObjeto property.
+     * Define o valor da propriedade numeroObjeto.
      * 
      * @param value
      *     allowed object is

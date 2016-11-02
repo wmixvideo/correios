@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Classe Java de buscaEventosListaResponse complex type.
- * <p>
+ * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="buscaEventosListaResponse">
  *   &lt;complexContent>
@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ *
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "buscaEventosListaResponse", propOrder = {
@@ -36,8 +38,10 @@ public class BuscaEventosListaResponse {
     /**
      * Obtém o valor da propriedade return.
      *
-     * @return possible object is
-     * {@link Sroxml }
+     * @return
+     *     possible object is
+     *     {@link Sroxml }
+     *     
      */
     public Sroxml getReturn() {
         return _return;
@@ -46,8 +50,10 @@ public class BuscaEventosListaResponse {
     /**
      * Define o valor da propriedade return.
      *
-     * @param value allowed object is
-     *              {@link Sroxml }
+     * @param value
+     *     allowed object is
+     *     {@link Sroxml }
+     *     
      */
     public void setReturn(Sroxml value) {
         this._return = value;

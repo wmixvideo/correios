@@ -3,16 +3,15 @@ package br.com.correios.webservice.rastro;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 
 
 /**
- * <p>Java class for objeto complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de objeto complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="objeto">
@@ -24,7 +23,7 @@ import java.util.List;
  *         &lt;element name="nome" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="categoria" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="erro" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element ref="{http://resource.webservice.correios.com.br/}evento" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="evento" type="{http://resource.webservice.correios.com.br/}eventos" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -49,11 +48,10 @@ public class Objeto {
     protected String nome;
     protected String categoria;
     protected String erro;
-    @XmlElement(namespace = "http://resource.webservice.correios.com.br/")
     protected List<Eventos> evento;
 
     /**
-     * Gets the value of the numero property.
+     * Obtém o valor da propriedade numero.
      * 
      * @return
      *     possible object is
@@ -65,7 +63,7 @@ public class Objeto {
     }
 
     /**
-     * Sets the value of the numero property.
+     * Define o valor da propriedade numero.
      * 
      * @param value
      *     allowed object is
@@ -77,7 +75,7 @@ public class Objeto {
     }
 
     /**
-     * Gets the value of the sigla property.
+     * Obtém o valor da propriedade sigla.
      * 
      * @return
      *     possible object is
@@ -89,7 +87,7 @@ public class Objeto {
     }
 
     /**
-     * Sets the value of the sigla property.
+     * Define o valor da propriedade sigla.
      * 
      * @param value
      *     allowed object is
@@ -101,7 +99,7 @@ public class Objeto {
     }
 
     /**
-     * Gets the value of the nome property.
+     * Obtém o valor da propriedade nome.
      * 
      * @return
      *     possible object is
@@ -113,7 +111,7 @@ public class Objeto {
     }
 
     /**
-     * Sets the value of the nome property.
+     * Define o valor da propriedade nome.
      * 
      * @param value
      *     allowed object is
@@ -125,7 +123,7 @@ public class Objeto {
     }
 
     /**
-     * Gets the value of the categoria property.
+     * Obtém o valor da propriedade categoria.
      * 
      * @return
      *     possible object is
@@ -137,7 +135,7 @@ public class Objeto {
     }
 
     /**
-     * Sets the value of the categoria property.
+     * Define o valor da propriedade categoria.
      * 
      * @param value
      *     allowed object is
@@ -149,7 +147,7 @@ public class Objeto {
     }
 
     /**
-     * Gets the value of the erro property.
+     * Obtém o valor da propriedade erro.
      * 
      * @return
      *     possible object is
@@ -161,7 +159,7 @@ public class Objeto {
     }
 
     /**
-     * Sets the value of the erro property.
+     * Define o valor da propriedade erro.
      * 
      * @param value
      *     allowed object is

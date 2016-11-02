@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for enderecoMobile complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de enderecoMobile complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="enderecoMobile">
@@ -64,7 +64,7 @@ public class EnderecoMobile {
     protected String celular;
 
     /**
-     * Gets the value of the codigo property.
+     * Obtém o valor da propriedade codigo.
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the codigo property.
+     * Define o valor da propriedade codigo.
      * 
      * @param value
      *     allowed object is
@@ -88,7 +88,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the cep property.
+     * Obtém o valor da propriedade cep.
      * 
      * @return
      *     possible object is
@@ -100,7 +100,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the cep property.
+     * Define o valor da propriedade cep.
      * 
      * @param value
      *     allowed object is
@@ -112,7 +112,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the logradouro property.
+     * Obtém o valor da propriedade logradouro.
      * 
      * @return
      *     possible object is
@@ -124,7 +124,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the logradouro property.
+     * Define o valor da propriedade logradouro.
      * 
      * @param value
      *     allowed object is
@@ -136,7 +136,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the complemento property.
+     * Obtém o valor da propriedade complemento.
      * 
      * @return
      *     possible object is
@@ -148,7 +148,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the complemento property.
+     * Define o valor da propriedade complemento.
      * 
      * @param value
      *     allowed object is
@@ -160,7 +160,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the numero property.
+     * Obtém o valor da propriedade numero.
      * 
      * @return
      *     possible object is
@@ -172,7 +172,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the numero property.
+     * Define o valor da propriedade numero.
      * 
      * @param value
      *     allowed object is
@@ -184,7 +184,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the localidade property.
+     * Obtém o valor da propriedade localidade.
      * 
      * @return
      *     possible object is
@@ -196,7 +196,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the localidade property.
+     * Define o valor da propriedade localidade.
      * 
      * @param value
      *     allowed object is
@@ -208,7 +208,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the uf property.
+     * Obtém o valor da propriedade uf.
      * 
      * @return
      *     possible object is
@@ -220,7 +220,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the uf property.
+     * Define o valor da propriedade uf.
      * 
      * @param value
      *     allowed object is
@@ -232,7 +232,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the bairro property.
+     * Obtém o valor da propriedade bairro.
      * 
      * @return
      *     possible object is
@@ -244,7 +244,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the bairro property.
+     * Define o valor da propriedade bairro.
      * 
      * @param value
      *     allowed object is
@@ -256,7 +256,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the latitude property.
+     * Obtém o valor da propriedade latitude.
      * 
      * @return
      *     possible object is
@@ -268,7 +268,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the latitude property.
+     * Define o valor da propriedade latitude.
      * 
      * @param value
      *     allowed object is
@@ -280,7 +280,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the longitude property.
+     * Obtém o valor da propriedade longitude.
      * 
      * @return
      *     possible object is
@@ -292,7 +292,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the longitude property.
+     * Define o valor da propriedade longitude.
      * 
      * @param value
      *     allowed object is
@@ -304,7 +304,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Gets the value of the celular property.
+     * Obtém o valor da propriedade celular.
      * 
      * @return
      *     possible object is
@@ -316,7 +316,7 @@ public class EnderecoMobile {
     }
 
     /**
-     * Sets the value of the celular property.
+     * Define o valor da propriedade celular.
      * 
      * @param value
      *     allowed object is
