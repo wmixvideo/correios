@@ -10,9 +10,9 @@ import java.util.List;
 
 
 /**
- * <p>Java class for eventos complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de eventos complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="eventos">
@@ -90,7 +90,7 @@ public class Eventos {
     protected EnderecoMobile endereco;
 
     /**
-     * Gets the value of the tipo property.
+     * Obtém o valor da propriedade tipo.
      * 
      * @return
      *     possible object is
@@ -102,7 +102,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the tipo property.
+     * Define o valor da propriedade tipo.
      * 
      * @param value
      *     allowed object is
@@ -114,7 +114,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the status property.
+     * Obtém o valor da propriedade status.
      * 
      * @return
      *     possible object is
@@ -126,7 +126,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the status property.
+     * Define o valor da propriedade status.
      * 
      * @param value
      *     allowed object is
@@ -138,7 +138,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the data property.
+     * Obtém o valor da propriedade data.
      * 
      * @return
      *     possible object is
@@ -150,7 +150,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the data property.
+     * Define o valor da propriedade data.
      * 
      * @param value
      *     allowed object is
@@ -162,7 +162,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the hora property.
+     * Obtém o valor da propriedade hora.
      * 
      * @return
      *     possible object is
@@ -174,7 +174,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the hora property.
+     * Define o valor da propriedade hora.
      * 
      * @param value
      *     allowed object is
@@ -186,7 +186,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the descricao property.
+     * Obtém o valor da propriedade descricao.
      * 
      * @return
      *     possible object is
@@ -198,7 +198,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the descricao property.
+     * Define o valor da propriedade descricao.
      * 
      * @param value
      *     allowed object is
@@ -210,7 +210,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the detalhe property.
+     * Obtém o valor da propriedade detalhe.
      * 
      * @return
      *     possible object is
@@ -222,7 +222,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the detalhe property.
+     * Define o valor da propriedade detalhe.
      * 
      * @param value
      *     allowed object is
@@ -234,7 +234,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the recebedor property.
+     * Obtém o valor da propriedade recebedor.
      * 
      * @return
      *     possible object is
@@ -246,7 +246,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the recebedor property.
+     * Define o valor da propriedade recebedor.
      * 
      * @param value
      *     allowed object is
@@ -258,7 +258,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the documento property.
+     * Obtém o valor da propriedade documento.
      * 
      * @return
      *     possible object is
@@ -270,7 +270,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the documento property.
+     * Define o valor da propriedade documento.
      * 
      * @param value
      *     allowed object is
@@ -282,7 +282,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the comentario property.
+     * Obtém o valor da propriedade comentario.
      * 
      * @return
      *     possible object is
@@ -294,7 +294,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the comentario property.
+     * Define o valor da propriedade comentario.
      * 
      * @param value
      *     allowed object is
@@ -306,7 +306,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the local property.
+     * Obtém o valor da propriedade local.
      * 
      * @return
      *     possible object is
@@ -318,7 +318,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the local property.
+     * Define o valor da propriedade local.
      * 
      * @param value
      *     allowed object is
@@ -330,7 +330,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the codigo property.
+     * Obtém o valor da propriedade codigo.
      * 
      * @return
      *     possible object is
@@ -342,7 +342,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the codigo property.
+     * Define o valor da propriedade codigo.
      * 
      * @param value
      *     allowed object is
@@ -354,7 +354,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the cidade property.
+     * Obtém o valor da propriedade cidade.
      * 
      * @return
      *     possible object is
@@ -366,7 +366,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the cidade property.
+     * Define o valor da propriedade cidade.
      * 
      * @param value
      *     allowed object is
@@ -378,7 +378,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the uf property.
+     * Obtém o valor da propriedade uf.
      * 
      * @return
      *     possible object is
@@ -390,7 +390,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the uf property.
+     * Define o valor da propriedade uf.
      * 
      * @param value
      *     allowed object is
@@ -402,7 +402,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the sto property.
+     * Obtém o valor da propriedade sto.
      * 
      * @return
      *     possible object is
@@ -414,7 +414,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the sto property.
+     * Define o valor da propriedade sto.
      * 
      * @param value
      *     allowed object is
@@ -426,7 +426,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the amazoncode property.
+     * Obtém o valor da propriedade amazoncode.
      * 
      * @return
      *     possible object is
@@ -438,7 +438,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the amazoncode property.
+     * Define o valor da propriedade amazoncode.
      * 
      * @param value
      *     allowed object is
@@ -450,7 +450,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the amazontimezone property.
+     * Obtém o valor da propriedade amazontimezone.
      * 
      * @return
      *     possible object is
@@ -462,7 +462,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the amazontimezone property.
+     * Define o valor da propriedade amazontimezone.
      * 
      * @param value
      *     allowed object is
@@ -503,7 +503,7 @@ public class Eventos {
     }
 
     /**
-     * Gets the value of the endereco property.
+     * Obtém o valor da propriedade endereco.
      * 
      * @return
      *     possible object is
@@ -515,7 +515,7 @@ public class Eventos {
     }
 
     /**
-     * Sets the value of the endereco property.
+     * Define o valor da propriedade endereco.
      * 
      * @param value
      *     allowed object is

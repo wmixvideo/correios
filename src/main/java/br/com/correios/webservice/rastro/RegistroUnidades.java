@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for registroUnidades complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de registroUnidades complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="registroUnidades">
@@ -52,7 +52,7 @@ public class RegistroUnidades {
     protected String tipoUnidade;
 
     /**
-     * Gets the value of the codigoDR property.
+     * Obtém o valor da propriedade codigoDR.
      * 
      * @return
      *     possible object is
@@ -64,7 +64,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Sets the value of the codigoDR property.
+     * Define o valor da propriedade codigoDR.
      * 
      * @param value
      *     allowed object is
@@ -76,7 +76,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Gets the value of the codigoMCU property.
+     * Obtém o valor da propriedade codigoMCU.
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Sets the value of the codigoMCU property.
+     * Define o valor da propriedade codigoMCU.
      * 
      * @param value
      *     allowed object is
@@ -100,7 +100,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Gets the value of the codigoSRO property.
+     * Obtém o valor da propriedade codigoSRO.
      * 
      * @return
      *     possible object is
@@ -112,7 +112,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Sets the value of the codigoSRO property.
+     * Define o valor da propriedade codigoSRO.
      * 
      * @param value
      *     allowed object is
@@ -124,7 +124,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Gets the value of the nomeUnidade property.
+     * Obtém o valor da propriedade nomeUnidade.
      * 
      * @return
      *     possible object is
@@ -136,7 +136,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Sets the value of the nomeUnidade property.
+     * Define o valor da propriedade nomeUnidade.
      * 
      * @param value
      *     allowed object is
@@ -148,7 +148,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Gets the value of the siglaDR property.
+     * Obtém o valor da propriedade siglaDR.
      * 
      * @return
      *     possible object is
@@ -160,7 +160,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Sets the value of the siglaDR property.
+     * Define o valor da propriedade siglaDR.
      * 
      * @param value
      *     allowed object is
@@ -172,7 +172,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Gets the value of the siglaTipoUnidade property.
+     * Obtém o valor da propriedade siglaTipoUnidade.
      * 
      * @return
      *     possible object is
@@ -184,7 +184,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Sets the value of the siglaTipoUnidade property.
+     * Define o valor da propriedade siglaTipoUnidade.
      * 
      * @param value
      *     allowed object is
@@ -196,7 +196,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Gets the value of the tipoUnidade property.
+     * Obtém o valor da propriedade tipoUnidade.
      * 
      * @return
      *     possible object is
@@ -208,7 +208,7 @@ public class RegistroUnidades {
     }
 
     /**
-     * Sets the value of the tipoUnidade property.
+     * Define o valor da propriedade tipoUnidade.
      * 
      * @param value
      *     allowed object is

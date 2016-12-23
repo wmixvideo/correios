@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for RastroJson complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Classe Java de RastroJson complex type.
+ *
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
  * &lt;complexType name="RastroJson">
@@ -49,7 +49,7 @@ public class RastroJson {
     protected String objetos;
 
     /**
-     * Gets the value of the usuario property.
+     * Obtém o valor da propriedade usuario.
      * 
      * @return
      *     possible object is
@@ -61,7 +61,7 @@ public class RastroJson {
     }
 
     /**
-     * Sets the value of the usuario property.
+     * Define o valor da propriedade usuario.
      * 
      * @param value
      *     allowed object is
@@ -73,7 +73,7 @@ public class RastroJson {
     }
 
     /**
-     * Gets the value of the senha property.
+     * Obtém o valor da propriedade senha.
      * 
      * @return
      *     possible object is
@@ -85,7 +85,7 @@ public class RastroJson {
     }
 
     /**
-     * Sets the value of the senha property.
+     * Define o valor da propriedade senha.
      * 
      * @param value
      *     allowed object is
@@ -97,7 +97,7 @@ public class RastroJson {
     }
 
     /**
-     * Gets the value of the tipo property.
+     * Obtém o valor da propriedade tipo.
      * 
      * @return
      *     possible object is
@@ -109,7 +109,7 @@ public class RastroJson {
     }
 
     /**
-     * Sets the value of the tipo property.
+     * Define o valor da propriedade tipo.
      * 
      * @param value
      *     allowed object is
@@ -121,7 +121,7 @@ public class RastroJson {
     }
 
     /**
-     * Gets the value of the resultado property.
+     * Obtém o valor da propriedade resultado.
      * 
      * @return
      *     possible object is
@@ -133,7 +133,7 @@ public class RastroJson {
     }
 
     /**
-     * Sets the value of the resultado property.
+     * Define o valor da propriedade resultado.
      * 
      * @param value
      *     allowed object is
@@ -145,7 +145,7 @@ public class RastroJson {
     }
 
     /**
-     * Gets the value of the lingua property.
+     * Obtém o valor da propriedade lingua.
      * 
      * @return
      *     possible object is
@@ -157,7 +157,7 @@ public class RastroJson {
     }
 
     /**
-     * Sets the value of the lingua property.
+     * Define o valor da propriedade lingua.
      * 
      * @param value
      *     allowed object is
@@ -169,7 +169,7 @@ public class RastroJson {
     }
 
     /**
-     * Gets the value of the objetos property.
+     * Obtém o valor da propriedade objetos.
      * 
      * @return
      *     possible object is
@@ -181,7 +181,7 @@ public class RastroJson {
     }
 
     /**
-     * Sets the value of the objetos property.
+     * Define o valor da propriedade objetos.
      * 
      * @param value
      *     allowed object is

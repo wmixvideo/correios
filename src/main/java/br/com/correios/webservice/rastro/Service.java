@@ -41,19 +41,19 @@ public interface Service {
     @RequestWrapper(localName = "buscaEventos", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.BuscaEventos")
     @ResponseWrapper(localName = "buscaEventosResponse", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.BuscaEventosResponse")
     @Action(input = "buscaEventos", output = "http://resource.webservice.correios.com.br/Service/buscaEventosResponse")
-    public br.com.correios.webservice.rastro.Sroxml buscaEventos(
-        @WebParam(name = "usuario", targetNamespace = "")
-        String usuario,
-        @WebParam(name = "senha", targetNamespace = "")
-        String senha,
-        @WebParam(name = "tipo", targetNamespace = "")
-        String tipo,
-        @WebParam(name = "resultado", targetNamespace = "")
-        String resultado,
-        @WebParam(name = "lingua", targetNamespace = "")
-        String lingua,
-        @WebParam(name = "objetos", targetNamespace = "")
-        String objetos);
+    Sroxml buscaEventos(
+            @WebParam(name = "usuario", targetNamespace = "")
+                    String usuario,
+            @WebParam(name = "senha", targetNamespace = "")
+                    String senha,
+            @WebParam(name = "tipo", targetNamespace = "")
+                    String tipo,
+            @WebParam(name = "resultado", targetNamespace = "")
+                    String resultado,
+            @WebParam(name = "lingua", targetNamespace = "")
+                    String lingua,
+            @WebParam(name = "objetos", targetNamespace = "")
+                    String objetos);
 
     /**
      * 
@@ -71,19 +71,19 @@ public interface Service {
     @RequestWrapper(localName = "buscaEventosLista", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.BuscaEventosLista")
     @ResponseWrapper(localName = "buscaEventosListaResponse", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.BuscaEventosListaResponse")
     @Action(input = "buscaEventosLista", output = "http://resource.webservice.correios.com.br/Service/buscaEventosListaResponse")
-    public br.com.correios.webservice.rastro.Sroxml buscaEventosLista(
-        @WebParam(name = "usuario", targetNamespace = "")
-        String usuario,
-        @WebParam(name = "senha", targetNamespace = "")
-        String senha,
-        @WebParam(name = "tipo", targetNamespace = "")
-        String tipo,
-        @WebParam(name = "resultado", targetNamespace = "")
-        String resultado,
-        @WebParam(name = "lingua", targetNamespace = "")
-        String lingua,
-        @WebParam(name = "objetos", targetNamespace = "")
-        List<String> objetos);
+    Sroxml buscaEventosLista(
+            @WebParam(name = "usuario", targetNamespace = "")
+                    String usuario,
+            @WebParam(name = "senha", targetNamespace = "")
+                    String senha,
+            @WebParam(name = "tipo", targetNamespace = "")
+                    String tipo,
+            @WebParam(name = "resultado", targetNamespace = "")
+                    String resultado,
+            @WebParam(name = "lingua", targetNamespace = "")
+                    String lingua,
+            @WebParam(name = "objetos", targetNamespace = "")
+                    List<String> objetos);
 
     /**
      * 
@@ -101,19 +101,19 @@ public interface Service {
     @RequestWrapper(localName = "RastroJson", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.RastroJson")
     @ResponseWrapper(localName = "RastroJsonResponse", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.RastroJsonResponse")
     @Action(input = "RastroJson", output = "http://resource.webservice.correios.com.br/Service/RastroJsonResponse")
-    public String rastroJson(
-        @WebParam(name = "usuario", targetNamespace = "")
-        String usuario,
-        @WebParam(name = "senha", targetNamespace = "")
-        String senha,
-        @WebParam(name = "tipo", targetNamespace = "")
-        String tipo,
-        @WebParam(name = "resultado", targetNamespace = "")
-        String resultado,
-        @WebParam(name = "lingua", targetNamespace = "")
-        String lingua,
-        @WebParam(name = "objetos", targetNamespace = "")
-        String objetos);
+    String rastroJson(
+            @WebParam(name = "usuario", targetNamespace = "")
+                    String usuario,
+            @WebParam(name = "senha", targetNamespace = "")
+                    String senha,
+            @WebParam(name = "tipo", targetNamespace = "")
+                    String tipo,
+            @WebParam(name = "resultado", targetNamespace = "")
+                    String resultado,
+            @WebParam(name = "lingua", targetNamespace = "")
+                    String lingua,
+            @WebParam(name = "objetos", targetNamespace = "")
+                    String objetos);
 
     /**
      * 
@@ -126,9 +126,9 @@ public interface Service {
     @RequestWrapper(localName = "ListaEntregaExterna", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.ListaEntregaExterna")
     @ResponseWrapper(localName = "ListaEntregaExternaResponse", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.ListaEntregaExternaResponse")
     @Action(input = "ListaEntregaExterna", output = "http://resource.webservice.correios.com.br/Service/ListaEntregaExternaResponse")
-    public ListaEntregaExterna2 listaEntregaExterna(
-        @WebParam(name = "loec", targetNamespace = "")
-        String loec);
+    ListaEntregaExterna2 listaEntregaExterna(
+            @WebParam(name = "loec", targetNamespace = "")
+                    String loec);
 
     /**
      * 
@@ -141,8 +141,8 @@ public interface Service {
     @RequestWrapper(localName = "UnidadesSRO", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.UnidadesSRO")
     @ResponseWrapper(localName = "UnidadesSROResponse", targetNamespace = "http://resource.webservice.correios.com.br/", className = "br.com.correios.webservice.rastro.UnidadesSROResponse")
     @Action(input = "UnidadesSRO", output = "http://resource.webservice.correios.com.br/Service/UnidadesSROResponse")
-    public List<RegistroUnidades> unidadesSRO(
-        @WebParam(name = "codigoSRO", targetNamespace = "")
-        String codigoSRO);
+    List<RegistroUnidades> unidadesSRO(
+            @WebParam(name = "codigoSRO", targetNamespace = "")
+                    String codigoSRO);
 
 }
