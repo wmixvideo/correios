@@ -6,6 +6,7 @@ import br.com.correios.webservice.rastro.Sroxml;
 
 import javax.xml.ws.BindingProvider;
 import java.util.Collection;
+import java.util.Map;
 
 public class WSCorreiosRastreador {
 
@@ -17,15 +18,17 @@ public class WSCorreiosRastreador {
     private final String usuario;
     private final String senha;
 
-
     public WSCorreiosRastreador(final String usuario, final String senha) {
         this.service = new Rastro().getServicePort();
         this.usuario = usuario;
         this.senha = senha;
-        String CONNECT_TIMEOUT = "com.sun.xml.internal.ws.connect.timeout";  //JAXWSProperties.CONNECT_TIMEOUT
-        String REQUEST_TIMEOUT = "com.sun.xml.internal.ws.request.timeout"; //JAXWSProperties.REQUEST_TIMEOUT
-        ((BindingProvider)this.service).getRequestContext().put(CONNECT_TIMEOUT, 3000);
-        ((BindingProvider)this.service).getRequestContext().put(REQUEST_TIMEOUT, 3000);
+    }
+
+    public WSCorreiosRastreador setTimeout(final int milliseconds) {
+        final Map<String, Object> requestContext = ((BindingProvider) this.service).getRequestContext();
+        requestContext.put("com.sun.xml.internal.ws.connect.timeout", milliseconds);
+        requestContext.put("com.sun.xml.internal.ws.request.timeout", milliseconds);
+        return this;
     }
 
     public Sroxml consultaObjeto(final String objeto) {
