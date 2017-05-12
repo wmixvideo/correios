@@ -16,7 +16,7 @@ public class WSCorreiosCalculadorTest {
     public void calculaPrazoEntregaSedexMondai() throws IOException {
         final String prazoEntrega = new WSCorreiosCalculador()
                 .setTimeout(3000)
-                .calculaPrazo("40010", "88101250", "89893000")
+                .calculaPrazo("04162", "88101250", "89893000")
                 .get().getPrazoEntrega();
         Assert.assertTrue(Integer.valueOf(prazoEntrega) > 1);
     }
@@ -25,7 +25,7 @@ public class WSCorreiosCalculadorTest {
     public void calculaPrazoEntregaPacMondai() throws IOException {
         final String prazoEntrega = new WSCorreiosCalculador()
                 .setTimeout(3000)
-                .calculaPrazo("41106", "88101250", "89893000")
+                .calculaPrazo("04669", "88101250", "89893000")
                 .get().getPrazoEntrega();
         Assert.assertTrue(Integer.valueOf(prazoEntrega) > 1);
     }
@@ -34,7 +34,7 @@ public class WSCorreiosCalculadorTest {
     public void calculaPrazoEntregaPacComData() throws IOException {
         final String prazoEntrega = new WSCorreiosCalculador()
                 .setTimeout(3000)
-                .calculaPrazoData("41106", "88101250", "89893000", LocalDate.now())
+                .calculaPrazoData("04669", "88101250", "89893000", LocalDate.now())
                 .get().getPrazoEntrega();
         Assert.assertTrue(Integer.valueOf(prazoEntrega) > 1);
     }

@@ -24,7 +24,7 @@ public class WSCorreiosRastreadorTest {
 
     @Test
     public void consultaObjetoWmix() throws Exception {
-        final Sroxml retorno = WS.consultaObjetos(Collections.singletonList("DW504244109BR"));
+        final Sroxml retorno = WS.consultaObjetos(Collections.singletonList("DW937249555BR"));
         Assert.assertNotNull(retorno);
         Assert.assertFalse(retorno.getObjeto().isEmpty());
         for (Objeto objeto : retorno.getObjeto()) {
