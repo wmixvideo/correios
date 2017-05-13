@@ -28,6 +28,7 @@ public class WSCorreiosRastreadorTest {
         Assert.assertNotNull(retorno);
         Assert.assertFalse(retorno.getObjeto().isEmpty());
         for (Objeto objeto : retorno.getObjeto()) {
+            //objeto.getEvento().forEach(e-> System.err.println(e.getDescricao()));
             Assert.assertFalse(objeto.getEvento().isEmpty());
         }
     }
