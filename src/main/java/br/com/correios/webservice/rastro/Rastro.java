@@ -18,14 +18,9 @@ import java.net.URL;
 public class Rastro
         extends javax.xml.ws.Service {
 
-    private final static URL RASTRO_WSDL_LOCATION;
-    private final static WebServiceException RASTRO_EXCEPTION;
+    private final static URL RASTRO_WSDL_LOCATION = Rastro.class.getResource("Rastro.wsdl");
+    private final static WebServiceException RASTRO_EXCEPTION = null;
     private final static QName RASTRO_QNAME = new QName("http://resource.webservice.correios.com.br/", "rastro");
-
-    static {
-        RASTRO_WSDL_LOCATION = ClassLoader.getSystemResource("Rastro.wsdl");
-        RASTRO_EXCEPTION = null;
-    }
 
     public Rastro() {
         super(__getWsdlLocation(), RASTRO_QNAME);

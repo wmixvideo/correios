@@ -6,7 +6,7 @@
     <types>
         <xsd:schema>
             <!--<xsd:import namespace="http://resource.webservice.correios.com.br/" schemaLocation="Rastro_schema1.xsd"/>-->
-            <xsd:import namespace="http://resource.webservice.correios.com.br/" schemaLocation="../../../docs/Rastro_schema1.xsd"/>
+            <xsd:import namespace="http://resource.webservice.correios.com.br/" schemaLocation="../../../../../../../../docs/Rastro_schema1.xsd"/>
         </xsd:schema>
     </types>
     <message name="UnidadesSRO">
