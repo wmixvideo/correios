@@ -6,7 +6,7 @@ Biblioteca para rastreamento de objetos no webservice dos Correios.
 [![Coverage Status](https://coveralls.io/repos/github/wmixlabs/correios/badge.svg?branch=master)](https://coveralls.io/github/wmixlabs/correios?branch=master)
 [![Apache 2.0 License](https://img.shields.io/badge/license-apache%202.0-green.svg) ](https://github.com/wmixlabs/correios/blob/master/LICENSE)
 
-##Forma de uso
+## Forma de uso
 
 ```java
 final WSCorreiosRastreador ws = new WSCorreiosRastreador("USUARIO", "SENHA");
