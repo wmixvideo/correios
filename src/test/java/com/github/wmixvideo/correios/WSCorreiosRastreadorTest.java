@@ -13,17 +13,17 @@ public class WSCorreiosRastreadorTest {
     private final WSCorreiosRastreador WS = new WSCorreiosRastreador("USUARIO", "SENHA");
 
     @Test
-    public void consultaObjeto() throws Exception {
+    public void consultaObjeto() {
         Assert.assertNotNull(WS.consultaObjeto("PJ907948743BR"));
     }
 
     @Test
-    public void consultaObjetos() throws Exception {
+    public void consultaObjetos() {
         Assert.assertNotNull(WS.consultaObjetos(Arrays.asList("PJ907948743BR", "PJ907948743BR")));
     }
 
     @Test
-    public void consultaObjetoWmix() throws Exception {
+    public void consultaObjetoWmix() {
         final Sroxml retorno = WS.consultaObjetos(Collections.singletonList("DW937249555BR"));
         Assert.assertNotNull(retorno);
         Assert.assertFalse(retorno.getObjeto().isEmpty());
