@@ -21,4 +21,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Build and Deploy
-      run: mvn -B package deploy -Dtoken=GITHUB_TOKEN
+      run: mvn -B package deploy
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
