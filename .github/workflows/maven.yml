@@ -20,6 +20,11 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build and Deploy
-      run: mvn -B package deploy
+
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+
+    - name: Publish to GitHub Packages Apache Maven
+      run: mvn deploy
+      env:
+        GITHUB_TOKEN: ${{ github.token }} # GITHUB_TOKEN is the default env for the password
