@@ -2,6 +2,7 @@
 
 Biblioteca para rastreamento de objetos no webservice dos Correios.
 
+![Java CI with Maven](https://github.com/wmixvideo/correios/workflows/Java%20CI%20with%20Maven/badge.svg)
 [![Build Status](https://travis-ci.org/wmixvideo/correios.svg?branch=master)](http://travis-ci.org/#!/wmixvideo/correios)
 [![Coverage Status](https://coveralls.io/repos/github/wmixlabs/correios/badge.svg?branch=master)](https://coveralls.io/github/wmixlabs/correios?branch=master)
 [![Apache 2.0 License](https://img.shields.io/badge/license-apache%202.0-green.svg) ](https://github.com/wmixvideo/correios/blob/master/LICENSE)
