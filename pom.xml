@@ -53,7 +53,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Wmix Video Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/wmixvideo</url>
+            <url>https://maven.pkg.github.com/wmixvideo/correios</url>
         </repository>
     </distributionManagement>
          

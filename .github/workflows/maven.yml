@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven
+name: GitHub CI
 
 on:
   push:
@@ -20,7 +20,5 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-    - name: Deploy
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/wmixvideo -Dtoken={{secrets.GITHUB_TOKEN}}
+    - name: Build and Deploy
+      run: mvn -B package deploy -Dtoken=GITHUB_TOKEN
