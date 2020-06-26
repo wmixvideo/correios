@@ -49,11 +49,22 @@
         </developer>
     </developers>
 
-    <distributionManagement>
+    <!-- <distributionManagement>
         <repository>
             <id>github</id>
             <name>GitHub Wmix Video Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/wmixvideo/correios</url>
+        </repository>
+    </distributionManagement> -->
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/releases</url>
         </repository>
     </distributionManagement>
          
