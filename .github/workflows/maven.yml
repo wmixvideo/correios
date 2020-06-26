@@ -21,15 +21,11 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Adding ssh key
-      uses: webfactory/ssh-agent@v0.2.0
-      with:
-        ssh-private-key: ${{ secrets.ssh_private_key }}
-
     - name: Git configuration
       run: |
         git config user.email "ci@wmixvideo.com.br"
         git config user.name "Wmix CI"
+
     - name: Release Maven package
       uses: samuelmeuli/action-maven-publish@v1.4.0
       with:
@@ -37,4 +33,4 @@ jobs:
         gpg_passphrase: ${{ secrets.gpg_passphrase }}
         nexus_username: ${{ secrets.nexus_username }}
         nexus_password: ${{ secrets.nexus_password }}
-        maven_goals_phases: clean -B deploy
+        maven_goals_phases: clean deploy
