@@ -1,11 +1,12 @@
 
 package br.com.correios.webservice.rastro;
 
+import jakarta.xml.ws.WebEndpoint;
+import jakarta.xml.ws.WebServiceClient;
+import jakarta.xml.ws.WebServiceException;
+import jakarta.xml.ws.WebServiceFeature;
+
 import javax.xml.namespace.QName;
-import javax.xml.ws.WebEndpoint;
-import javax.xml.ws.WebServiceClient;
-import javax.xml.ws.WebServiceException;
-import javax.xml.ws.WebServiceFeature;
 import java.net.URL;
 
 
@@ -15,8 +16,7 @@ import java.net.URL;
  * Generated source version: 2.2
  */
 @WebServiceClient(name = "rastro", targetNamespace = "http://resource.webservice.correios.com.br/")
-public class Rastro
-        extends javax.xml.ws.Service {
+public class Rastro extends jakarta.xml.ws.Service {
 
     private final static URL RASTRO_WSDL_LOCATION = Rastro.class.getResource("Rastro.wsdl");
     private final static WebServiceException RASTRO_EXCEPTION = null;
@@ -55,7 +55,7 @@ public class Rastro
     }
 
     /**
-     * @param features A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
+     * @param features A list of {@link jakarta.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
      * @return returns Service
      */
     @WebEndpoint(name = "ServicePort")

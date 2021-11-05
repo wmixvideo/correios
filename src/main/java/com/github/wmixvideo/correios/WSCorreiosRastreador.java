@@ -1,12 +1,10 @@
 package com.github.wmixvideo.correios;
 
-import br.com.correios.webservice.calculador.CalcPrecoPrazoWS;
-import br.com.correios.webservice.calculador.CalcPrecoPrazoWSSoap;
 import br.com.correios.webservice.rastro.Rastro;
 import br.com.correios.webservice.rastro.Service;
 import br.com.correios.webservice.rastro.Sroxml;
+import jakarta.xml.ws.BindingProvider;
 
-import javax.xml.ws.BindingProvider;
 import java.util.Collection;
 import java.util.Map;
 

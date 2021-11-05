@@ -1,6 +1,7 @@
 package br.com.correios.webservice.calculador;
 
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
+
 import java.math.BigDecimal;
 
 

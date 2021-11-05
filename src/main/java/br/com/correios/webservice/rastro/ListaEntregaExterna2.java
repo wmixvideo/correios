@@ -1,7 +1,8 @@
 
 package br.com.correios.webservice.rastro;
 
-import javax.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.*;
+
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
  * <p>Classe Java de listaEntregaExterna complex type.
  *
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * 
+ *
  * <pre>
  * &lt;complexType name="listaEntregaExterna">
  *   &lt;complexContent>
@@ -32,8 +33,8 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "listaEntregaExterna", propOrder = {
@@ -65,11 +66,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Obtém o valor da propriedade carteiro.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCarteiro() {
         return carteiro;
@@ -77,11 +78,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Define o valor da propriedade carteiro.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCarteiro(String value) {
         this.carteiro = value;
@@ -89,11 +90,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Obtém o valor da propriedade data.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public XMLGregorianCalendar getData() {
         return data;
@@ -101,11 +102,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Define o valor da propriedade data.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *     
+     *
      */
     public void setData(XMLGregorianCalendar value) {
         this.data = value;
@@ -113,11 +114,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Obtém o valor da propriedade distrito.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDistrito() {
         return distrito;
@@ -125,11 +126,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Define o valor da propriedade distrito.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDistrito(String value) {
         this.distrito = value;
@@ -137,11 +138,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Obtém o valor da propriedade estacao.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getEstacao() {
         return estacao;
@@ -149,11 +150,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Define o valor da propriedade estacao.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setEstacao(String value) {
         this.estacao = value;
@@ -161,11 +162,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Obtém o valor da propriedade id.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getId() {
         return id;
@@ -173,11 +174,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Define o valor da propriedade id.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setId(String value) {
         this.id = value;
@@ -185,11 +186,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Obtém o valor da propriedade loec.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getLoec() {
         return loec;
@@ -197,11 +198,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Define o valor da propriedade loec.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setLoec(String value) {
         this.loec = value;
@@ -209,11 +210,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Obtém o valor da propriedade nomeCarteiro.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNomeCarteiro() {
         return nomeCarteiro;
@@ -221,11 +222,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Define o valor da propriedade nomeCarteiro.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNomeCarteiro(String value) {
         this.nomeCarteiro = value;
@@ -233,11 +234,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Obtém o valor da propriedade nomeUnidade.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getNomeUnidade() {
         return nomeUnidade;
@@ -245,11 +246,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Define o valor da propriedade nomeUnidade.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setNomeUnidade(String value) {
         this.nomeUnidade = value;
@@ -257,25 +258,25 @@ public class ListaEntregaExterna2 {
 
     /**
      * Gets the value of the objetos property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the objetos property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getObjetos().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ObjetoPostal }
-     * 
-     * 
+     *
+     *
      */
     public List<ObjetoPostal> getObjetos() {
         if (objetos == null) {
@@ -286,11 +287,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Obtém o valor da propriedade unidade.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getUnidade() {
         return unidade;
@@ -298,11 +299,11 @@ public class ListaEntregaExterna2 {
 
     /**
      * Define o valor da propriedade unidade.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setUnidade(String value) {
         this.unidade = value;

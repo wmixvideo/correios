@@ -1,10 +1,11 @@
 
 package br.com.correios.webservice.rastro;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * <p>Classe Java de eventos complex type.
  *
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
- * 
+ *
  * <pre>
  * &lt;complexType name="eventos">
  *   &lt;complexContent>
@@ -42,8 +43,8 @@ import java.util.List;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "eventos", propOrder = {
@@ -91,11 +92,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade tipo.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getTipo() {
         return tipo;
@@ -103,11 +104,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade tipo.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setTipo(String value) {
         this.tipo = value;
@@ -115,11 +116,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade status.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getStatus() {
         return status;
@@ -127,11 +128,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade status.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setStatus(String value) {
         this.status = value;
@@ -139,11 +140,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade data.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getData() {
         return data;
@@ -151,11 +152,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade data.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setData(String value) {
         this.data = value;
@@ -163,11 +164,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade hora.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getHora() {
         return hora;
@@ -175,11 +176,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade hora.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setHora(String value) {
         this.hora = value;
@@ -187,11 +188,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade descricao.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDescricao() {
         return descricao;
@@ -199,11 +200,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade descricao.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDescricao(String value) {
         this.descricao = value;
@@ -211,11 +212,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade detalhe.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDetalhe() {
         return detalhe;
@@ -223,11 +224,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade detalhe.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDetalhe(String value) {
         this.detalhe = value;
@@ -235,11 +236,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade recebedor.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getRecebedor() {
         return recebedor;
@@ -247,11 +248,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade recebedor.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setRecebedor(String value) {
         this.recebedor = value;
@@ -259,11 +260,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade documento.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDocumento() {
         return documento;
@@ -271,11 +272,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade documento.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDocumento(String value) {
         this.documento = value;
@@ -283,11 +284,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade comentario.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getComentario() {
         return comentario;
@@ -295,11 +296,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade comentario.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setComentario(String value) {
         this.comentario = value;
@@ -307,11 +308,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade local.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getLocal() {
         return local;
@@ -319,11 +320,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade local.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setLocal(String value) {
         this.local = value;
@@ -331,11 +332,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade codigo.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCodigo() {
         return codigo;
@@ -343,11 +344,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade codigo.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCodigo(String value) {
         this.codigo = value;
@@ -355,11 +356,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade cidade.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCidade() {
         return cidade;
@@ -367,11 +368,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade cidade.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCidade(String value) {
         this.cidade = value;
@@ -379,11 +380,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade uf.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getUf() {
         return uf;
@@ -391,11 +392,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade uf.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setUf(String value) {
         this.uf = value;
@@ -403,11 +404,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade sto.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getSto() {
         return sto;
@@ -415,11 +416,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade sto.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setSto(String value) {
         this.sto = value;
@@ -427,11 +428,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade amazoncode.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getAmazoncode() {
         return amazoncode;
@@ -439,11 +440,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade amazoncode.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setAmazoncode(String value) {
         this.amazoncode = value;
@@ -451,11 +452,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade amazontimezone.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getAmazontimezone() {
         return amazontimezone;
@@ -463,11 +464,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade amazontimezone.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setAmazontimezone(String value) {
         this.amazontimezone = value;
@@ -475,25 +476,25 @@ public class Eventos {
 
     /**
      * Gets the value of the destino property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the destino property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDestino().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Destinos }
-     * 
-     * 
+     *
+     *
      */
     public List<Destinos> getDestino() {
         if (destino == null) {
@@ -504,11 +505,11 @@ public class Eventos {
 
     /**
      * Obtém o valor da propriedade endereco.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link EnderecoMobile }
-     *     
+     *
      */
     public EnderecoMobile getEndereco() {
         return endereco;
@@ -516,11 +517,11 @@ public class Eventos {
 
     /**
      * Define o valor da propriedade endereco.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link EnderecoMobile }
-     *     
+     *
      */
     public void setEndereco(EnderecoMobile value) {
         this.endereco = value;

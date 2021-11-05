@@ -4,8 +4,8 @@ import br.com.correios.webservice.calculador.CResultado;
 import br.com.correios.webservice.calculador.CServico;
 import br.com.correios.webservice.calculador.CalcPrecoPrazoWS;
 import br.com.correios.webservice.calculador.CalcPrecoPrazoWSSoap;
+import jakarta.xml.ws.BindingProvider;
 
-import javax.xml.ws.BindingProvider;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
@@ -19,7 +19,8 @@ public class WSCorreiosCalculador {
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     private CalcPrecoPrazoWSSoap calculadora;
     private int timeoutMilliseconds = 15000;
-    private String usuario, senha;
+    private final String usuario;
+    private final String senha;
 
     public WSCorreiosCalculador() {
         this.calculadora = null;
