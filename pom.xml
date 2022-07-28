@@ -53,16 +53,30 @@
         </developer>
     </developers>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/releases</url>
-        </repository>
-    </distributionManagement>
+	<profiles>
+		<profile>
+			<id>central</id>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>ossrh</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+				</snapshotRepository>
+				<repository>
+					<id>ossrh</id>
+					<url>https://oss.sonatype.org/content/repositories/releases</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>github</id>
+			<distributionManagement>
+				<repository>
+					<id>github</id>
+					<url>https://maven.pkg.github.com/wmixvideo/correios</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+	</profiles>
 
     <dependencies>
         <dependency>
