@@ -15,27 +15,30 @@ public class WSCorreiosCalculadorTest {
     @Test
     public void calculaPrazoEntregaSedexMondai() {
         final String prazoEntrega = new WSCorreiosCalculador()
-                .setTimeout(3000)
                 .calculaPrazo("04162", "88101250", "89893000")
-                .get().getPrazoEntrega();
+                .get()
+                .getPrazoEntrega();
+
         Assert.assertTrue(Integer.parseInt(prazoEntrega) > 1);
     }
 
     @Test
     public void calculaPrazoEntregaPacMondai() {
         final String prazoEntrega = new WSCorreiosCalculador()
-                .setTimeout(3000)
                 .calculaPrazo("04669", "88101250", "89893000")
-                .get().getPrazoEntrega();
+                .get()
+                .getPrazoEntrega();
+
         Assert.assertTrue(Integer.parseInt(prazoEntrega) > 1);
     }
 
     @Test
     public void calculaPrazoEntregaPacComData() {
         final String prazoEntrega = new WSCorreiosCalculador()
-                .setTimeout(3000)
                 .calculaPrazoData("04669", "88101250", "89893000", LocalDate.now())
-                .get().getPrazoEntrega();
+                .get()
+                .getPrazoEntrega();
+
         Assert.assertTrue(Integer.parseInt(prazoEntrega) > 1);
     }
 

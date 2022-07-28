@@ -27,9 +27,5 @@ public class WSCorreiosRastreadorTest {
         final Sroxml retorno = WS.consultaObjetos(Collections.singletonList("DW937249555BR"));
         Assert.assertNotNull(retorno);
         Assert.assertFalse(retorno.getObjeto().isEmpty());
-        //for (Objeto objeto : retorno.getObjeto()) {
-            //objeto.getEvento().forEach(e-> System.err.println(e.getDescricao()));
-            //Assert.assertFalse(objeto.getEvento().isEmpty());
-        //}
     }
 }
