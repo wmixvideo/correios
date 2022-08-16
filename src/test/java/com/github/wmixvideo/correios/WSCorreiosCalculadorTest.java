@@ -39,8 +39,8 @@ public class WSCorreiosCalculadorTest {
 
     @Test
     public void calculaPrecosEPrazos() {
-        final List<CServico> servicos = ws.calculaPrecoPrazo(Arrays.asList("40010", "40215", "40290", "41106"), "88101250", "89893000", BigDecimal.valueOf(1.5), Formato.CAIXA, BigDecimal.valueOf(25), BigDecimal.valueOf(25), BigDecimal.valueOf(25), null, Opcao.NAO, BigDecimal.valueOf(25), Opcao.NAO);
-        Assert.assertTrue(servicos.stream().allMatch(s -> s.getErro().isEmpty()));
+        final List<CServico> servicos = ws.calculaPrecoPrazo("40010", "88101250", "89893000", BigDecimal.valueOf(1.5), Formato.CAIXA, BigDecimal.valueOf(25), BigDecimal.valueOf(25), BigDecimal.valueOf(25), null, Opcao.NAO, BigDecimal.valueOf(25), Opcao.NAO);
+        Assert.assertTrue(servicos.stream().allMatch(s -> s.getErro().isEmpty() || s.getErro().equals("0")));
         Assert.assertTrue(servicos.stream().allMatch(s -> s.getMsgErro().isEmpty()));
         Assert.assertTrue(servicos.size() >= 1 && servicos.size() <= 5);
     }

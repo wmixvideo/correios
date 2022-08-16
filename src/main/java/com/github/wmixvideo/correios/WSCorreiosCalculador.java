@@ -24,8 +24,8 @@ public class WSCorreiosCalculador {
 
     public WSCorreiosCalculador() {
         this.calculadora = null;
-        this.usuario = null;
-        this.senha = null;
+        this.usuario = "";
+        this.senha = "";
     }
 
     public WSCorreiosCalculador(final String usuario, final String senha) {
@@ -82,9 +82,8 @@ public class WSCorreiosCalculador {
         return servicos.isEmpty() ? null : new BigDecimal(servicos.get(0).getValor());
     }
 
-    public final List<CServico> calculaPrecoPrazo(final List<String> servicos, final String origem, final String destino, final BigDecimal pesoEmKg, final Formato formato, final BigDecimal comprimentoEmCm, final BigDecimal alturaEmCm, final BigDecimal larguraEmCm, final BigDecimal diametroEmCm, final Opcao maoPropria, final BigDecimal valorDeclarado, final Opcao avisoRecebimento) {
+    public final List<CServico> calculaPrecoPrazo(final String servico, final String origem, final String destino, final BigDecimal pesoEmKg, final Formato formato, final BigDecimal comprimentoEmCm, final BigDecimal alturaEmCm, final BigDecimal larguraEmCm, final BigDecimal diametroEmCm, final Opcao maoPropria, final BigDecimal valorDeclarado, final Opcao avisoRecebimento) {
         String peso = new DecimalFormat("0.##").format(pesoEmKg);
-        String servico = String.join(",", servicos);
 
         final CResultado retornoCorreios = getCalculadora().calcPrecoPrazo(this.usuario, this.senha, servico, origem, destino, peso, formato.getCodigo(), comprimentoEmCm, alturaEmCm, larguraEmCm, diametroEmCm, maoPropria.getOpcao(), valorDeclarado, avisoRecebimento.getOpcao());
         return retornoCorreios.getServicos().getCServico();
