@@ -24,8 +24,8 @@ public class WSCorreiosCalculador {
 
     public WSCorreiosCalculador() {
         this.calculadora = null;
-        this.usuario = null;
-        this.senha = null;
+        this.usuario = "";
+        this.senha = "";
     }
 
     public WSCorreiosCalculador(final String usuario, final String senha) {
