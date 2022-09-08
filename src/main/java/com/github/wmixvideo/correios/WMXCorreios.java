@@ -7,12 +7,14 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.math.BigDecimal;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -59,6 +61,23 @@ public class WMXCorreios {
         return this;
     }
 
+    private Document request(final String body) throws WMXCorreiosException {
+        try {
+            final HttpRequest request = HttpRequest.newBuilder().uri(new URI(CORREIOS_URL_PRECOPRAZO)).POST(HttpRequest.BodyPublishers.ofString(body)).header("Content-Type", "text/xml; charset=utf-8").timeout(Duration.ofSeconds(timeout)).build();
+            final HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            //System.out.println(response.body());
+            try (final InputStream stream = new ByteArrayInputStream(response.body().getBytes(StandardCharsets.UTF_8))) {
+                final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+                dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);// optional, but recommended, process XML securely, avoid attacks like XML External Entities (XXE)
+                final Document document = dbf.newDocumentBuilder().parse(stream);
+                document.getDocumentElement().normalize();// optional, but recommended: http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
+                return document;
+            }
+        } catch (Throwable t) {
+            throw new WMXCorreiosException(t);
+        }
+    }
+
     /**
      * Retorna a lista de servicos que os Correios prestam.
      *
@@ -73,38 +92,22 @@ public class WMXCorreios {
                     </soap12:Body>
                 </soap12:Envelope>
                 """;
-        try {
-            final HttpRequest request = HttpRequest.newBuilder().uri(new URI(CORREIOS_URL_PRECOPRAZO)).POST(HttpRequest.BodyPublishers.ofString(body)).header("Content-Type", "text/xml; charset=utf-8").header("SOAPAction", "http://tempuri.org/ListaServicos").timeout(Duration.ofSeconds(timeout)).build();
-            final HttpResponse<InputStream> response = client.send(request, HttpResponse.BodyHandlers.ofInputStream());
-
-            // instancia o factory
-            final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);// optional, but recommended, process XML securely, avoid attacks like XML External Entities (XXE)
-
-            // parseia arquivo
-            final Document document = dbf.newDocumentBuilder().parse(response.body());
-            document.getDocumentElement().normalize();// optional, but recommended: http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
-
-            // percore os nodos transformando-os em uma classe
-            final NodeList list = document.getElementsByTagName("cServicosCalculo");
-            final List<WMXCorreiosServicoItem> servicos = new ArrayList<>();
-            for (int i = 0; i < list.getLength(); i++) {
-                final Node node = list.item(i);
-                if (node.getNodeType() == Node.ELEMENT_NODE) {
-                    final Element element = (Element) node;
-
-                    final String codigo = element.getElementsByTagName("codigo").item(0).getTextContent().trim();
-                    final String descricao = element.getElementsByTagName("descricao").item(0).getTextContent().trim();
-                    final boolean calculaPreco = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_preco").item(0).getTextContent().trim());
-                    final boolean calculaPrazo = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_prazo").item(0).getTextContent().trim());
-                    servicos.add(new WMXCorreiosServicoItem(codigo, descricao, calculaPreco, calculaPrazo));
-                }
+        final NodeList list = this.request(body).getElementsByTagName("cServicosCalculo");
+        final List<WMXCorreiosServicoItem> servicos = new ArrayList<>();
+        for (int i = 0; i < list.getLength(); i++) {
+            final Node node = list.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                final Element element = (Element) node;
+                final String codigo = element.getElementsByTagName("codigo").item(0).getTextContent().trim();
+                final String descricao = element.getElementsByTagName("descricao").item(0).getTextContent().trim();
+                final boolean calculaPreco = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_preco").item(0).getTextContent().trim());
+                final boolean calculaPrazo = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_prazo").item(0).getTextContent().trim());
+                servicos.add(new WMXCorreiosServicoItem(codigo, descricao, calculaPreco, calculaPrazo));
             }
-            return servicos;
-        } catch (Throwable t) {
-            throw new WMXCorreiosException(t);
         }
+        return servicos;
     }
+
 
     public List<WMXCorreiosServicoPrecoPrazo> calculaPrecoPrazo(final String codigoServico, final String cepOrigem, final String cepDestino, final int peso, final WMXCorreiosFormato formato, final int comprimento, final int altura, final int largura, final int diametro, final boolean maoPropria, final BigDecimal valorDeclarado, final boolean avisoRecebimento, final LocalDate data) throws WMXCorreiosException {
         final String body = """
@@ -129,43 +132,25 @@ public class WMXCorreios {
                       <sDtCalculo>%s</sDtCalculo>
                     </CalcPrecoPrazoData>
                   </soap12:Body>
-                </soap12:Envelope>                                
+                </soap12:Envelope>
                 """.formatted(this.empresa, this.senha, codigoServico, cepOrigem, cepDestino, peso, formato.getCodigo(), comprimento, altura, largura, diametro, maoPropria, valorDeclarado, avisoRecebimento, data);
 
-        try {
-            final HttpRequest request = HttpRequest.newBuilder().uri(new URI(CORREIOS_URL_PRECOPRAZO)).POST(HttpRequest.BodyPublishers.ofString(body)).header("Content-Type", "text/xml; charset=utf-8").header("SOAPAction", "http://tempuri.org/CalcPrecoPrazoData").timeout(Duration.ofSeconds(timeout)).build();
-            final HttpResponse<InputStream> response = client.send(request, HttpResponse.BodyHandlers.ofInputStream());
-            //final HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            //System.out.println(response.body());
+        final NodeList list = this.request(body).getElementsByTagName("cServico");
+        final List<WMXCorreiosServicoPrecoPrazo> servicos = new ArrayList<>();
+        for (int i = 0; i < list.getLength(); i++) {
+            final Node node = list.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                final Element element = (Element) node;
 
-            // instancia o factory
-            final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);// optional, but recommended, process XML securely, avoid attacks like XML External Entities (XXE)
-
-            // parseia arquivo
-            final Document document = dbf.newDocumentBuilder().parse(response.body());
-            document.getDocumentElement().normalize();// optional, but recommended: http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
-
-            // percore os nodos transformando-os em uma classe
-            final NodeList list = document.getElementsByTagName("cServico");
-            final List<WMXCorreiosServicoPrecoPrazo> servicos = new ArrayList<>();
-            for (int i = 0; i < list.getLength(); i++) {
-                final Node node = list.item(i);
-                if (node.getNodeType() == Node.ELEMENT_NODE) {
-                    final Element element = (Element) node;
-
-                    //FIXME: faltando terminar a implementacao
-                    final String codigo = element.getElementsByTagName("Codigo").item(0).getTextContent().trim();
-                    final int erroCodigo = Integer.parseInt(element.getElementsByTagName("Erro").item(0).getTextContent().trim());
-                    final String erroDescricao = element.getElementsByTagName("MsgErro").item(0).getTextContent().trim();
-                    //final boolean calculaPreco = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_preco").item(0).getTextContent().trim());
-                    //final boolean calculaPrazo = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_prazo").item(0).getTextContent().trim());
-                    servicos.add(new WMXCorreiosServicoPrecoPrazo(codigo, null, 0, null, null, null, null, false, false, null, erroCodigo, erroDescricao));
-                }
+                //FIXME: faltando terminar a implementacao
+                final String codigo = element.getElementsByTagName("Codigo").item(0).getTextContent().trim();
+                final int erroCodigo = Integer.parseInt(element.getElementsByTagName("Erro").item(0).getTextContent().trim());
+                final String erroDescricao = element.getElementsByTagName("MsgErro").item(0).getTextContent().trim();
+                //final boolean calculaPreco = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_preco").item(0).getTextContent().trim());
+                //final boolean calculaPrazo = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_prazo").item(0).getTextContent().trim());
+                servicos.add(new WMXCorreiosServicoPrecoPrazo(codigo, null, 0, null, null, null, null, false, false, null, erroCodigo, erroDescricao));
             }
-            return servicos;
-        } catch (Throwable t) {
-            throw new WMXCorreiosException(t);
         }
+        return servicos;
     }
 }
