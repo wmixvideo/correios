@@ -3,7 +3,6 @@ package com.github.wmixvideo.correios;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import java.net.http.HttpTimeoutException;
 import java.time.LocalDate;
 import java.util.List;
 
