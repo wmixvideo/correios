@@ -15,8 +15,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.text.DecimalFormat;
 import java.time.Duration;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,11 +30,19 @@ public class WMXCorreios {
     private int timeout;
     private String empresa, senha;
 
+    private final DecimalFormat decimalFormat;
+
     public WMXCorreios() {
         this.client = HttpClient.newBuilder().version(HttpClient.Version.HTTP_2).followRedirects(HttpClient.Redirect.NORMAL).build();
         this.timeout = 15;
         this.empresa = "";
         this.senha = "";
+
+        //cria o formato decimal para os parsers
+        this.decimalFormat = new DecimalFormat("#,##0.00");
+        this.decimalFormat.getDecimalFormatSymbols().setDecimalSeparator(',');
+        this.decimalFormat.getDecimalFormatSymbols().setGroupingSeparator('.');
+        this.decimalFormat.setParseBigDecimal(true);
     }
 
     /**
@@ -108,49 +116,55 @@ public class WMXCorreios {
         return servicos;
     }
 
+    public WMXCorreiosServicoPrecoPrazo calculaPrecoPrazo(final String codigoServico, final String cepOrigem, final String cepDestino, final int peso, final WMXCorreiosFormato formato, final int comprimento, final int altura, final int largura, final int diametro, final boolean maoPropria, final BigDecimal valorDeclarado, final boolean avisoRecebimento) throws WMXCorreiosException {
+        try {
+            final String body = """
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+                      <soap12:Body>
+                        <CalcPrecoPrazo xmlns="http://tempuri.org/">
+                          <nCdEmpresa>%s</nCdEmpresa>
+                          <sDsSenha>%s</sDsSenha>
+                          <nCdServico>%s</nCdServico>
+                          <sCepOrigem>%s</sCepOrigem>
+                          <sCepDestino>%s</sCepDestino>
+                          <nVlPeso>%s</nVlPeso>
+                          <nCdFormato>%s</nCdFormato>
+                          <nVlComprimento>%s</nVlComprimento>
+                          <nVlAltura>%s</nVlAltura>
+                          <nVlLargura>%s</nVlLargura>
+                          <nVlDiametro>%s</nVlDiametro>
+                          <sCdMaoPropria>%s</sCdMaoPropria>
+                          <nVlValorDeclarado>%s</nVlValorDeclarado>
+                          <sCdAvisoRecebimento>%s</sCdAvisoRecebimento>
+                        </CalcPrecoPrazo>
+                      </soap12:Body>
+                    </soap12:Envelope>
+                    """.formatted(this.empresa, this.senha, codigoServico, cepOrigem, cepDestino, peso, formato.getCodigo(), comprimento, altura, largura, diametro, maoPropria ? "S" : "N", valorDeclarado, avisoRecebimento ? "S" : "N");
 
-    public List<WMXCorreiosServicoPrecoPrazo> calculaPrecoPrazo(final String codigoServico, final String cepOrigem, final String cepDestino, final int peso, final WMXCorreiosFormato formato, final int comprimento, final int altura, final int largura, final int diametro, final boolean maoPropria, final BigDecimal valorDeclarado, final boolean avisoRecebimento, final LocalDate data) throws WMXCorreiosException {
-        final String body = """
-                <?xml version="1.0" encoding="utf-8"?>
-                <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
-                  <soap12:Body>
-                    <CalcPrecoPrazoData xmlns="http://tempuri.org/">
-                      <nCdEmpresa>%s</nCdEmpresa>
-                      <sDsSenha>%s</sDsSenha>
-                      <nCdServico>%s</nCdServico>
-                      <sCepOrigem>%s</sCepOrigem>
-                      <sCepDestino>%s</sCepDestino>
-                      <nVlPeso>%s</nVlPeso>
-                      <nCdFormato>%s</nCdFormato>
-                      <nVlComprimento>%s</nVlComprimento>
-                      <nVlAltura>%s</nVlAltura>
-                      <nVlLargura>%s</nVlLargura>
-                      <nVlDiametro>%s</nVlDiametro>
-                      <sCdMaoPropria>%s</sCdMaoPropria>
-                      <nVlValorDeclarado>%s</nVlValorDeclarado>
-                      <sCdAvisoRecebimento>%s</sCdAvisoRecebimento>
-                      <sDtCalculo>%s</sDtCalculo>
-                    </CalcPrecoPrazoData>
-                  </soap12:Body>
-                </soap12:Envelope>
-                """.formatted(this.empresa, this.senha, codigoServico, cepOrigem, cepDestino, peso, formato.getCodigo(), comprimento, altura, largura, diametro, maoPropria, valorDeclarado, avisoRecebimento, data);
-
-        final NodeList list = this.request(body).getElementsByTagName("cServico");
-        final List<WMXCorreiosServicoPrecoPrazo> servicos = new ArrayList<>();
-        for (int i = 0; i < list.getLength(); i++) {
-            final Node node = list.item(i);
-            if (node.getNodeType() == Node.ELEMENT_NODE) {
-                final Element element = (Element) node;
-
-                //FIXME: faltando terminar a implementacao
-                final String codigo = element.getElementsByTagName("Codigo").item(0).getTextContent().trim();
-                final int erroCodigo = Integer.parseInt(element.getElementsByTagName("Erro").item(0).getTextContent().trim());
-                final String erroDescricao = element.getElementsByTagName("MsgErro").item(0).getTextContent().trim();
-                //final boolean calculaPreco = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_preco").item(0).getTextContent().trim());
-                //final boolean calculaPrazo = "S".equalsIgnoreCase(element.getElementsByTagName("calcula_prazo").item(0).getTextContent().trim());
-                servicos.add(new WMXCorreiosServicoPrecoPrazo(codigo, null, 0, null, null, null, null, false, false, null, erroCodigo, erroDescricao));
+            final NodeList list = this.request(body).getElementsByTagName("cServico");
+            for (int i = 0; i < list.getLength(); i++) {
+                final Node node = list.item(i);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    final Element element = (Element) node;
+                    return new WMXCorreiosServicoPrecoPrazo(
+                            element.getElementsByTagName("Codigo").item(0).getTextContent().trim(),
+                            (BigDecimal) this.decimalFormat.parse(element.getElementsByTagName("Valor").item(0).getTextContent().trim()),
+                            Integer.parseInt(element.getElementsByTagName("PrazoEntrega").item(0).getTextContent().trim()),
+                            (BigDecimal) this.decimalFormat.parse(element.getElementsByTagName("ValorMaoPropria").item(0).getTextContent().trim()),
+                            (BigDecimal) this.decimalFormat.parse(element.getElementsByTagName("ValorAvisoRecebimento").item(0).getTextContent().trim()),
+                            (BigDecimal) this.decimalFormat.parse(element.getElementsByTagName("ValorValorDeclarado").item(0).getTextContent().trim()),
+                            (BigDecimal) this.decimalFormat.parse(element.getElementsByTagName("ValorSemAdicionais").item(0).getTextContent().trim()),
+                            "S".equalsIgnoreCase(element.getElementsByTagName("EntregaDomiciliar").item(0).getTextContent().trim()),
+                            "S".equalsIgnoreCase(element.getElementsByTagName("EntregaSabado").item(0).getTextContent().trim()),
+                            element.getElementsByTagName("obsFim").item(0).getTextContent().trim(),
+                            Integer.parseInt(element.getElementsByTagName("Erro").item(0).getTextContent().trim()),
+                            element.getElementsByTagName("MsgErro").item(0).getTextContent().trim());
+                }
             }
+            return null;
+        } catch (Exception e) {
+            throw new WMXCorreiosException(e);
         }
-        return servicos;
     }
 }
