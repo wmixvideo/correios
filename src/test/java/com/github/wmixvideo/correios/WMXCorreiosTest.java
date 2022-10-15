@@ -33,4 +33,11 @@ public class WMXCorreiosTest {
         assertTrue(calculaPrecoPrazo.valor().signum() > 0);
         assertTrue(calculaPrecoPrazo.prazoEntrega() > 0);
     }
+
+    @Test
+    public void rastreamentoTest() throws WMXCorreiosException {
+        final WMXCorreiosObjeto objeto = new WMXCorreios().rastrear("OH184746375BR");
+        assertNotNull(objeto);
+        assertEquals("OH184746375BR", objeto.numero());
+    }
 }

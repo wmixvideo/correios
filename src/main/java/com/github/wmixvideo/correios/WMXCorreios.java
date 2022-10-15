@@ -26,6 +26,7 @@ import java.util.List;
 public class WMXCorreios {
 
     private static final String CORREIOS_URL_PRECOPRAZO = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx";
+    private static final String CORREIOS_URL_RASTREAMENTO = "http://webservice.correios.com.br/service/rastro";
     private final HttpClient client;
     private int timeout;
     private String empresa, senha;
@@ -69,9 +70,9 @@ public class WMXCorreios {
         return this;
     }
 
-    private Document request(final String body) throws WMXCorreiosException {
+    private Document request(final String body, final String url) throws WMXCorreiosException {
         try {
-            final HttpRequest request = HttpRequest.newBuilder().uri(new URI(CORREIOS_URL_PRECOPRAZO)).POST(HttpRequest.BodyPublishers.ofString(body)).header("Content-Type", "text/xml; charset=utf-8").timeout(Duration.ofSeconds(timeout)).build();
+            final HttpRequest request = HttpRequest.newBuilder().uri(new URI(url)).POST(HttpRequest.BodyPublishers.ofString(body)).header("Content-Type", "text/xml; charset=utf-8").timeout(Duration.ofSeconds(timeout)).build();
             final HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             //System.out.println(response.body());
             try (final InputStream stream = new ByteArrayInputStream(response.body().getBytes(StandardCharsets.UTF_8))) {
@@ -100,7 +101,9 @@ public class WMXCorreios {
                     </soap12:Body>
                 </soap12:Envelope>
                 """;
-        final NodeList list = this.request(body).getElementsByTagName("cServicosCalculo");
+
+        final Document document = this.request(body, CORREIOS_URL_PRECOPRAZO);
+        final NodeList list = document.getElementsByTagName("cServicosCalculo");
         final List<WMXCorreiosServicoItem> servicos = new ArrayList<>();
         for (int i = 0; i < list.getLength(); i++) {
             final Node node = list.item(i);
@@ -142,7 +145,8 @@ public class WMXCorreios {
                     </soap12:Envelope>
                     """.formatted(this.empresa, this.senha, codigoServico, cepOrigem, cepDestino, peso, formato.getCodigo(), comprimento, altura, largura, diametro, maoPropria ? "S" : "N", valorDeclarado, avisoRecebimento ? "S" : "N");
 
-            final NodeList list = this.request(body).getElementsByTagName("cServico");
+            final Document document = this.request(body, CORREIOS_URL_PRECOPRAZO);
+            final NodeList list = document.getElementsByTagName("cServico");
             for (int i = 0; i < list.getLength(); i++) {
                 final Node node = list.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -160,6 +164,44 @@ public class WMXCorreios {
                             element.getElementsByTagName("obsFim").item(0).getTextContent().trim(),
                             Integer.parseInt(element.getElementsByTagName("Erro").item(0).getTextContent().trim()),
                             element.getElementsByTagName("MsgErro").item(0).getTextContent().trim());
+                }
+            }
+            return null;
+        } catch (Exception e) {
+            throw new WMXCorreiosException(e);
+        }
+    }
+
+    public WMXCorreiosObjeto rastrear(final String objeto) throws WMXCorreiosException {
+        try {
+            final String body = """
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:res="http://resource.webservice.correios.com.br/">
+                       <soapenv:Header />
+                       <soapenv:Body>
+                           <res:buscaEventos>
+                               <usuario>ECT</usuario>
+                               <senha>SRO</senha>
+                               <tipo>L</tipo>
+                               <resultado>T</resultado>
+                               <lingua>101</lingua>
+                               <objetos>%s</objetos>
+                           </res:buscaEventos>
+                    </soapenv:Body>
+                    """.formatted(objeto);
+
+            final Document document = this.request(body, CORREIOS_URL_RASTREAMENTO);
+            final NodeList list = document.getElementsByTagName("objeto");
+            for (int i = 0; i < list.getLength(); i++) {
+                final Node node = list.item(i);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    final Element element = (Element) node;
+                    return new WMXCorreiosObjeto(
+                            element.getElementsByTagName("numero").item(0).getTextContent().trim(),
+                            element.getElementsByTagName("sigla").item(0).getTextContent().trim(),
+                            element.getElementsByTagName("nome").item(0).getTextContent().trim(),
+                            element.getElementsByTagName("categoria").item(0).getTextContent().trim(),
+                            null);
                 }
             }
             return null;
