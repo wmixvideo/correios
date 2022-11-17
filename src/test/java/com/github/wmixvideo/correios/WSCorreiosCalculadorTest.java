@@ -52,4 +52,19 @@ public class WSCorreiosCalculadorTest {
         Assert.assertTrue(servico.getErro().isEmpty() || servico.getErro().equals("0"));
         Assert.assertTrue(servico.getMsgErro().isEmpty());
     }
+
+    @Test
+    public void calculaPrecosEPrazosCepIncompleto() {
+        final CServico servico = ws.calculaPrecoPrazo("40010", "881012", "898930", BigDecimal.valueOf(1.5), Formato.CAIXA, BigDecimal.valueOf(25), BigDecimal.valueOf(25), BigDecimal.valueOf(25), null, Opcao.NAO, BigDecimal.valueOf(25), Opcao.NAO);
+        Assert.assertNotNull(servico);
+        Assert.assertFalse(servico.getMsgErro().isEmpty());
+    }
+
+    @Test
+    public void calculaPrecosEPrazosTamanhoMaior() {
+        final CServico servico = ws.calculaPrecoPrazo("40010", "88101250", "89893000", BigDecimal.valueOf(1.5), Formato.CAIXA, BigDecimal.valueOf(180), BigDecimal.valueOf(180), BigDecimal.valueOf(180), null, Opcao.NAO, BigDecimal.valueOf(50), Opcao.NAO);
+        Assert.assertNotNull(servico);
+        Assert.assertFalse(servico.getMsgErro().isEmpty());
+    }    
+
 }
