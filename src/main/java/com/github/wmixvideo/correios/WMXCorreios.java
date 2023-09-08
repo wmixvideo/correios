@@ -74,7 +74,7 @@ public class WMXCorreios {
         try {
             final HttpRequest request = HttpRequest.newBuilder().uri(new URI(url)).POST(HttpRequest.BodyPublishers.ofString(body)).header("Content-Type", "text/xml; charset=utf-8").timeout(Duration.ofSeconds(timeout)).build();
             final HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            //System.out.println(response.body());
+            System.out.println(response.body());
             try (final InputStream stream = new ByteArrayInputStream(response.body().getBytes(StandardCharsets.UTF_8))) {
                 final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
                 dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);// optional, but recommended, process XML securely, avoid attacks like XML External Entities (XXE)
@@ -180,15 +180,15 @@ public class WMXCorreios {
                        <soapenv:Header />
                        <soapenv:Body>
                            <res:buscaEventos>
-                               <usuario>ECT</usuario>
-                               <senha>SRO</senha>
+                               <usuario>%s</usuario>
+                               <senha>%s</senha>
                                <tipo>L</tipo>
                                <resultado>T</resultado>
                                <lingua>101</lingua>
                                <objetos>%s</objetos>
                            </res:buscaEventos>
                     </soapenv:Body>
-                    """.formatted(objeto);
+                    """.formatted(this.empresa, this.senha, objeto);
 
             final Document document = this.request(body, CORREIOS_URL_RASTREAMENTO);
             final NodeList list = document.getElementsByTagName("objeto");

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,7 +37,9 @@ public class WMXCorreiosTest {
 
     @Test
     public void rastreamentoTest() throws WMXCorreiosException {
-        final WMXCorreiosObjeto objeto = new WMXCorreios().rastrear("OH184746375BR");
+        final String empresa = Objects.requireNonNullElse(System.getenv("CORREIOS_USUARIO"), "ECT");
+        final String senha = Objects.requireNonNullElse(System.getenv("CORREIOS_SENHA"), "SRO");
+        final WMXCorreiosObjeto objeto = new WMXCorreios().empresa(empresa, senha).rastrear("OH184746375BR");
         assertNotNull(objeto);
         assertEquals("OH184746375BR", objeto.numero());
     }
